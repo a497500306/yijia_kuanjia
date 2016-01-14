@@ -7,6 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		390575F11C477FF500208D54 /* MLLBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390575F01C477FF500208D54 /* MLLBModel.swift */; };
+		390575F51C47848300208D54 /* MLWebModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390575F41C47848300208D54 /* MLWebModel.swift */; };
+		390575F91C478F3100208D54 /* yijiaData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 390575F71C478F3100208D54 /* yijiaData.xcdatamodeld */; };
+		390576081C4790B100208D54 /* LBData.m in Sources */ = {isa = PBXBuildFile; fileRef = 390576051C4790B100208D54 /* LBData.m */; };
+		390576091C4790B100208D54 /* LBData+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 390576071C4790B100208D54 /* LBData+CoreDataProperties.m */; };
+		390576121C47B1FF00208D54 /* sdafadsf.m in Sources */ = {isa = PBXBuildFile; fileRef = 390576111C47B1FF00208D54 /* sdafadsf.m */; };
+		390576721C47D91500208D54 /* CoreFMDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 3905761C1C47D91500208D54 /* CoreFMDB.m */; };
+		390576731C47D91500208D54 /* NSString+CoreFMDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 390576201C47D91500208D54 /* NSString+CoreFMDB.m */; };
+		390576791C47D91500208D54 /* CoreHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 390576311C47D91500208D54 /* CoreHttp.m */; };
+		3905767A1C47D91500208D54 /* NSString+CoreHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 390576341C47D91500208D54 /* NSString+CoreHttp.m */; };
+		3905767B1C47D91500208D54 /* NSData+MimeType.m in Sources */ = {isa = PBXBuildFile; fileRef = 390576371C47D91500208D54 /* NSData+MimeType.m */; };
+		3905767C1C47D91500208D54 /* NSData+Param.m in Sources */ = {isa = PBXBuildFile; fileRef = 390576391C47D91500208D54 /* NSData+Param.m */; };
+		3905767D1C47D91500208D54 /* NSString+File.m in Sources */ = {isa = PBXBuildFile; fileRef = 3905763B1C47D91500208D54 /* NSString+File.m */; };
+		3905767E1C47D91500208D54 /* NSURL+File.m in Sources */ = {isa = PBXBuildFile; fileRef = 3905763D1C47D91500208D54 /* NSURL+File.m */; };
+		3905767F1C47D91500208D54 /* UploadFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 3905763F1C47D91500208D54 /* UploadFile.m */; };
+		390576801C47D91500208D54 /* CoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 390576421C47D91500208D54 /* CoreModel.m */; };
+		390576811C47D91500208D54 /* NSArray+CoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 390576471C47D91500208D54 /* NSArray+CoreModel.m */; };
+		390576821C47D91500208D54 /* NSDictionary+Sqlite.m in Sources */ = {isa = PBXBuildFile; fileRef = 3905764A1C47D91500208D54 /* NSDictionary+Sqlite.m */; };
+		390576831C47D91500208D54 /* CoreModel+Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3905764D1C47D91500208D54 /* CoreModel+Cache.m */; };
+		390576841C47D91500208D54 /* CoreModel+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 3905764F1C47D91500208D54 /* CoreModel+Compare.m */; };
+		390576851C47D91500208D54 /* NSObject+CoreModelCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 390576511C47D91500208D54 /* NSObject+CoreModelCommon.m */; };
+		390576861C47D91500208D54 /* NSObject+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 390576531C47D91500208D54 /* NSObject+Create.m */; };
+		390576871C47D91500208D54 /* NSObject+Delete.m in Sources */ = {isa = PBXBuildFile; fileRef = 390576551C47D91500208D54 /* NSObject+Delete.m */; };
+		390576881C47D91500208D54 /* NSObject+Insert.m in Sources */ = {isa = PBXBuildFile; fileRef = 390576571C47D91500208D54 /* NSObject+Insert.m */; };
+		390576891C47D91500208D54 /* NSObject+Save.m in Sources */ = {isa = PBXBuildFile; fileRef = 390576591C47D91500208D54 /* NSObject+Save.m */; };
+		3905768A1C47D91500208D54 /* NSObject+Select.m in Sources */ = {isa = PBXBuildFile; fileRef = 3905765B1C47D91500208D54 /* NSObject+Select.m */; };
+		3905768B1C47D91500208D54 /* NSObject+Update.m in Sources */ = {isa = PBXBuildFile; fileRef = 3905765D1C47D91500208D54 /* NSObject+Update.m */; };
+		3905768C1C47D91500208D54 /* NSOperationQueue+Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 390576601C47D91500208D54 /* NSOperationQueue+Queue.m */; };
+		3905768D1C47D91500208D54 /* NSString+Stackoverflow.m in Sources */ = {isa = PBXBuildFile; fileRef = 390576631C47D91500208D54 /* NSString+Stackoverflow.m */; };
+		3905768E1C47D91500208D54 /* CoreModelConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 390576661C47D91500208D54 /* CoreModelConst.m */; };
+		3905768F1C47D91500208D54 /* CoreStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 3905766E1C47D91500208D54 /* CoreStatus.m */; };
 		3941FBB41C28F605003ECCFC /* MLFjyyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3941FBB31C28F605003ECCFC /* MLFjyyController.swift */; };
 		3941FBBC1C295657003ECCFC /* HMAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3941FBB91C295657003ECCFC /* HMAnnotation.m */; };
 		3941FBBD1C295657003ECCFC /* HMAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3941FBBB1C295657003ECCFC /* HMAnnotationView.m */; };
@@ -122,6 +153,69 @@
 
 /* Begin PBXFileReference section */
 		1E6A422A09BA87B14C8CD8FD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		390575F01C477FF500208D54 /* MLLBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLLBModel.swift; sourceTree = "<group>"; };
+		390575F41C47848300208D54 /* MLWebModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLWebModel.swift; sourceTree = "<group>"; };
+		390575F81C478F3100208D54 /* yijiaData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = yijiaData.xcdatamodel; sourceTree = "<group>"; };
+		390576041C4790B100208D54 /* LBData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBData.h; sourceTree = "<group>"; };
+		390576051C4790B100208D54 /* LBData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBData.m; sourceTree = "<group>"; };
+		390576061C4790B100208D54 /* LBData+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LBData+CoreDataProperties.h"; sourceTree = "<group>"; };
+		390576071C4790B100208D54 /* LBData+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LBData+CoreDataProperties.m"; sourceTree = "<group>"; };
+		390576101C47B1FF00208D54 /* sdafadsf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sdafadsf.h; sourceTree = "<group>"; };
+		390576111C47B1FF00208D54 /* sdafadsf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sdafadsf.m; sourceTree = "<group>"; };
+		3905761B1C47D91500208D54 /* CoreFMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreFMDB.h; sourceTree = "<group>"; };
+		3905761C1C47D91500208D54 /* CoreFMDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreFMDB.m; sourceTree = "<group>"; };
+		3905761F1C47D91500208D54 /* NSString+CoreFMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CoreFMDB.h"; sourceTree = "<group>"; };
+		390576201C47D91500208D54 /* NSString+CoreFMDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CoreFMDB.m"; sourceTree = "<group>"; };
+		3905762E1C47D91500208D54 /* CoreFMDBSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreFMDBSingleton.h; sourceTree = "<group>"; };
+		390576301C47D91500208D54 /* CoreHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreHttp.h; sourceTree = "<group>"; };
+		390576311C47D91500208D54 /* CoreHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreHttp.m; sourceTree = "<group>"; };
+		390576331C47D91500208D54 /* NSString+CoreHttp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CoreHttp.h"; sourceTree = "<group>"; };
+		390576341C47D91500208D54 /* NSString+CoreHttp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CoreHttp.m"; sourceTree = "<group>"; };
+		390576361C47D91500208D54 /* NSData+MimeType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MimeType.h"; sourceTree = "<group>"; };
+		390576371C47D91500208D54 /* NSData+MimeType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MimeType.m"; sourceTree = "<group>"; };
+		390576381C47D91500208D54 /* NSData+Param.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Param.h"; sourceTree = "<group>"; };
+		390576391C47D91500208D54 /* NSData+Param.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Param.m"; sourceTree = "<group>"; };
+		3905763A1C47D91500208D54 /* NSString+File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+File.h"; sourceTree = "<group>"; };
+		3905763B1C47D91500208D54 /* NSString+File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+File.m"; sourceTree = "<group>"; };
+		3905763C1C47D91500208D54 /* NSURL+File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+File.h"; sourceTree = "<group>"; };
+		3905763D1C47D91500208D54 /* NSURL+File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+File.m"; sourceTree = "<group>"; };
+		3905763E1C47D91500208D54 /* UploadFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadFile.h; sourceTree = "<group>"; };
+		3905763F1C47D91500208D54 /* UploadFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadFile.m; sourceTree = "<group>"; };
+		390576411C47D91500208D54 /* CoreModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreModel.h; sourceTree = "<group>"; };
+		390576421C47D91500208D54 /* CoreModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreModel.m; sourceTree = "<group>"; };
+		390576461C47D91500208D54 /* NSArray+CoreModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CoreModel.h"; sourceTree = "<group>"; };
+		390576471C47D91500208D54 /* NSArray+CoreModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CoreModel.m"; sourceTree = "<group>"; };
+		390576491C47D91500208D54 /* NSDictionary+Sqlite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Sqlite.h"; sourceTree = "<group>"; };
+		3905764A1C47D91500208D54 /* NSDictionary+Sqlite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Sqlite.m"; sourceTree = "<group>"; };
+		3905764C1C47D91500208D54 /* CoreModel+Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreModel+Cache.h"; sourceTree = "<group>"; };
+		3905764D1C47D91500208D54 /* CoreModel+Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CoreModel+Cache.m"; sourceTree = "<group>"; };
+		3905764E1C47D91500208D54 /* CoreModel+Compare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreModel+Compare.h"; sourceTree = "<group>"; };
+		3905764F1C47D91500208D54 /* CoreModel+Compare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CoreModel+Compare.m"; sourceTree = "<group>"; };
+		390576501C47D91500208D54 /* NSObject+CoreModelCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CoreModelCommon.h"; sourceTree = "<group>"; };
+		390576511C47D91500208D54 /* NSObject+CoreModelCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CoreModelCommon.m"; sourceTree = "<group>"; };
+		390576521C47D91500208D54 /* NSObject+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Create.h"; sourceTree = "<group>"; };
+		390576531C47D91500208D54 /* NSObject+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Create.m"; sourceTree = "<group>"; };
+		390576541C47D91500208D54 /* NSObject+Delete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Delete.h"; sourceTree = "<group>"; };
+		390576551C47D91500208D54 /* NSObject+Delete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Delete.m"; sourceTree = "<group>"; };
+		390576561C47D91500208D54 /* NSObject+Insert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Insert.h"; sourceTree = "<group>"; };
+		390576571C47D91500208D54 /* NSObject+Insert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Insert.m"; sourceTree = "<group>"; };
+		390576581C47D91500208D54 /* NSObject+Save.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Save.h"; sourceTree = "<group>"; };
+		390576591C47D91500208D54 /* NSObject+Save.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Save.m"; sourceTree = "<group>"; };
+		3905765A1C47D91500208D54 /* NSObject+Select.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Select.h"; sourceTree = "<group>"; };
+		3905765B1C47D91500208D54 /* NSObject+Select.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Select.m"; sourceTree = "<group>"; };
+		3905765C1C47D91500208D54 /* NSObject+Update.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Update.h"; sourceTree = "<group>"; };
+		3905765D1C47D91500208D54 /* NSObject+Update.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Update.m"; sourceTree = "<group>"; };
+		3905765F1C47D91500208D54 /* NSOperationQueue+Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOperationQueue+Queue.h"; sourceTree = "<group>"; };
+		390576601C47D91500208D54 /* NSOperationQueue+Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSOperationQueue+Queue.m"; sourceTree = "<group>"; };
+		390576621C47D91500208D54 /* NSString+Stackoverflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Stackoverflow.h"; sourceTree = "<group>"; };
+		390576631C47D91500208D54 /* NSString+Stackoverflow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Stackoverflow.m"; sourceTree = "<group>"; };
+		390576651C47D91500208D54 /* CoreModelConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreModelConst.h; sourceTree = "<group>"; };
+		390576661C47D91500208D54 /* CoreModelConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreModelConst.m; sourceTree = "<group>"; };
+		390576681C47D91500208D54 /* CoreModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreModelProtocol.h; sourceTree = "<group>"; };
+		390576691C47D91500208D54 /* CorePageModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorePageModelProtocol.h; sourceTree = "<group>"; };
+		3905766B1C47D91500208D54 /* CoreModelType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreModelType.h; sourceTree = "<group>"; };
+		3905766D1C47D91500208D54 /* CoreStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreStatus.h; sourceTree = "<group>"; };
+		3905766E1C47D91500208D54 /* CoreStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreStatus.m; sourceTree = "<group>"; };
 		3941FBB31C28F605003ECCFC /* MLFjyyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLFjyyController.swift; sourceTree = "<group>"; };
 		3941FBB51C28FDAE003ECCFC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3941FBB81C295657003ECCFC /* HMAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMAnnotation.h; sourceTree = "<group>"; };
@@ -305,6 +399,270 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		390575EE1C477FE000208D54 /* 轮播器 */ = {
+			isa = PBXGroup;
+			children = (
+				390575F01C477FF500208D54 /* MLLBModel.swift */,
+			);
+			path = "轮播器";
+			sourceTree = "<group>";
+		};
+		390575EF1C477FE000208D54 /* 新闻 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "新闻";
+			sourceTree = "<group>";
+		};
+		390575F31C47847500208D54 /* 网络主Model */ = {
+			isa = PBXGroup;
+			children = (
+				390575F41C47848300208D54 /* MLWebModel.swift */,
+			);
+			path = "网络主Model";
+			sourceTree = "<group>";
+		};
+		390575F61C478F1B00208D54 /* 数据库 */ = {
+			isa = PBXGroup;
+			children = (
+				390576021C47908000208D54 /* 轮播图Data */,
+				390576031C47908000208D54 /* 新闻Data */,
+				390575F71C478F3100208D54 /* yijiaData.xcdatamodeld */,
+			);
+			path = "数据库";
+			sourceTree = "<group>";
+		};
+		390576021C47908000208D54 /* 轮播图Data */ = {
+			isa = PBXGroup;
+			children = (
+				390576041C4790B100208D54 /* LBData.h */,
+				390576051C4790B100208D54 /* LBData.m */,
+				390576061C4790B100208D54 /* LBData+CoreDataProperties.h */,
+				390576071C4790B100208D54 /* LBData+CoreDataProperties.m */,
+			);
+			path = "轮播图Data";
+			sourceTree = "<group>";
+		};
+		390576031C47908000208D54 /* 新闻Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "新闻Data";
+			sourceTree = "<group>";
+		};
+		390576191C47D91500208D54 /* 数据库第三方 */ = {
+			isa = PBXGroup;
+			children = (
+				3905761A1C47D91500208D54 /* CoreFMDB */,
+				3905762F1C47D91500208D54 /* CoreHttp */,
+				390576401C47D91500208D54 /* CoreModel */,
+				3905766C1C47D91500208D54 /* CoreStatus */,
+			);
+			path = "数据库第三方";
+			sourceTree = "<group>";
+		};
+		3905761A1C47D91500208D54 /* CoreFMDB */ = {
+			isa = PBXGroup;
+			children = (
+				3905761B1C47D91500208D54 /* CoreFMDB.h */,
+				3905761C1C47D91500208D54 /* CoreFMDB.m */,
+				3905761D1C47D91500208D54 /* Lib */,
+			);
+			path = CoreFMDB;
+			sourceTree = "<group>";
+		};
+		3905761D1C47D91500208D54 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				3905761E1C47D91500208D54 /* Category */,
+				3905762D1C47D91500208D54 /* Singleton */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		3905761E1C47D91500208D54 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				3905761F1C47D91500208D54 /* NSString+CoreFMDB.h */,
+				390576201C47D91500208D54 /* NSString+CoreFMDB.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		3905762D1C47D91500208D54 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				3905762E1C47D91500208D54 /* CoreFMDBSingleton.h */,
+			);
+			path = Singleton;
+			sourceTree = "<group>";
+		};
+		3905762F1C47D91500208D54 /* CoreHttp */ = {
+			isa = PBXGroup;
+			children = (
+				390576301C47D91500208D54 /* CoreHttp.h */,
+				390576311C47D91500208D54 /* CoreHttp.m */,
+				390576321C47D91500208D54 /* NSString+CoreHttp */,
+				390576351C47D91500208D54 /* Upload */,
+			);
+			path = CoreHttp;
+			sourceTree = "<group>";
+		};
+		390576321C47D91500208D54 /* NSString+CoreHttp */ = {
+			isa = PBXGroup;
+			children = (
+				390576331C47D91500208D54 /* NSString+CoreHttp.h */,
+				390576341C47D91500208D54 /* NSString+CoreHttp.m */,
+			);
+			path = "NSString+CoreHttp";
+			sourceTree = "<group>";
+		};
+		390576351C47D91500208D54 /* Upload */ = {
+			isa = PBXGroup;
+			children = (
+				390576361C47D91500208D54 /* NSData+MimeType.h */,
+				390576371C47D91500208D54 /* NSData+MimeType.m */,
+				390576381C47D91500208D54 /* NSData+Param.h */,
+				390576391C47D91500208D54 /* NSData+Param.m */,
+				3905763A1C47D91500208D54 /* NSString+File.h */,
+				3905763B1C47D91500208D54 /* NSString+File.m */,
+				3905763C1C47D91500208D54 /* NSURL+File.h */,
+				3905763D1C47D91500208D54 /* NSURL+File.m */,
+				3905763E1C47D91500208D54 /* UploadFile.h */,
+				3905763F1C47D91500208D54 /* UploadFile.m */,
+			);
+			path = Upload;
+			sourceTree = "<group>";
+		};
+		390576401C47D91500208D54 /* CoreModel */ = {
+			isa = PBXGroup;
+			children = (
+				390576411C47D91500208D54 /* CoreModel.h */,
+				390576421C47D91500208D54 /* CoreModel.m */,
+				390576431C47D91500208D54 /* Lib */,
+			);
+			path = CoreModel;
+			sourceTree = "<group>";
+		};
+		390576431C47D91500208D54 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				390576441C47D91500208D54 /* Category */,
+				390576641C47D91500208D54 /* CoreMoelConst */,
+				390576671C47D91500208D54 /* Protocol */,
+				3905766A1C47D91500208D54 /* Type */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		390576441C47D91500208D54 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				390576451C47D91500208D54 /* NSArray */,
+				390576481C47D91500208D54 /* NSDictionary */,
+				3905764B1C47D91500208D54 /* NSObject */,
+				3905765E1C47D91500208D54 /* NSOperationQueue */,
+				390576611C47D91500208D54 /* NSString */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		390576451C47D91500208D54 /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				390576461C47D91500208D54 /* NSArray+CoreModel.h */,
+				390576471C47D91500208D54 /* NSArray+CoreModel.m */,
+			);
+			path = NSArray;
+			sourceTree = "<group>";
+		};
+		390576481C47D91500208D54 /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				390576491C47D91500208D54 /* NSDictionary+Sqlite.h */,
+				3905764A1C47D91500208D54 /* NSDictionary+Sqlite.m */,
+			);
+			path = NSDictionary;
+			sourceTree = "<group>";
+		};
+		3905764B1C47D91500208D54 /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				3905764C1C47D91500208D54 /* CoreModel+Cache.h */,
+				3905764D1C47D91500208D54 /* CoreModel+Cache.m */,
+				3905764E1C47D91500208D54 /* CoreModel+Compare.h */,
+				3905764F1C47D91500208D54 /* CoreModel+Compare.m */,
+				390576501C47D91500208D54 /* NSObject+CoreModelCommon.h */,
+				390576511C47D91500208D54 /* NSObject+CoreModelCommon.m */,
+				390576521C47D91500208D54 /* NSObject+Create.h */,
+				390576531C47D91500208D54 /* NSObject+Create.m */,
+				390576541C47D91500208D54 /* NSObject+Delete.h */,
+				390576551C47D91500208D54 /* NSObject+Delete.m */,
+				390576561C47D91500208D54 /* NSObject+Insert.h */,
+				390576571C47D91500208D54 /* NSObject+Insert.m */,
+				390576581C47D91500208D54 /* NSObject+Save.h */,
+				390576591C47D91500208D54 /* NSObject+Save.m */,
+				3905765A1C47D91500208D54 /* NSObject+Select.h */,
+				3905765B1C47D91500208D54 /* NSObject+Select.m */,
+				3905765C1C47D91500208D54 /* NSObject+Update.h */,
+				3905765D1C47D91500208D54 /* NSObject+Update.m */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
+		3905765E1C47D91500208D54 /* NSOperationQueue */ = {
+			isa = PBXGroup;
+			children = (
+				3905765F1C47D91500208D54 /* NSOperationQueue+Queue.h */,
+				390576601C47D91500208D54 /* NSOperationQueue+Queue.m */,
+			);
+			path = NSOperationQueue;
+			sourceTree = "<group>";
+		};
+		390576611C47D91500208D54 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				390576621C47D91500208D54 /* NSString+Stackoverflow.h */,
+				390576631C47D91500208D54 /* NSString+Stackoverflow.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		390576641C47D91500208D54 /* CoreMoelConst */ = {
+			isa = PBXGroup;
+			children = (
+				390576651C47D91500208D54 /* CoreModelConst.h */,
+				390576661C47D91500208D54 /* CoreModelConst.m */,
+			);
+			path = CoreMoelConst;
+			sourceTree = "<group>";
+		};
+		390576671C47D91500208D54 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				390576681C47D91500208D54 /* CoreModelProtocol.h */,
+				390576691C47D91500208D54 /* CorePageModelProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		3905766A1C47D91500208D54 /* Type */ = {
+			isa = PBXGroup;
+			children = (
+				3905766B1C47D91500208D54 /* CoreModelType.h */,
+			);
+			path = Type;
+			sourceTree = "<group>";
+		};
+		3905766C1C47D91500208D54 /* CoreStatus */ = {
+			isa = PBXGroup;
+			children = (
+				3905766D1C47D91500208D54 /* CoreStatus.h */,
+				3905766E1C47D91500208D54 /* CoreStatus.m */,
+			);
+			path = CoreStatus;
+			sourceTree = "<group>";
+		};
 		3941FBAF1C28F5B2003ECCFC /* 附近的医院 */ = {
 			isa = PBXGroup;
 			children = (
@@ -914,6 +1272,7 @@
 		39FC03A61C19618200E9EB28 /* 医家 */ = {
 			isa = PBXGroup;
 			children = (
+				390575F61C478F1B00208D54 /* 数据库 */,
 				39FC03ED1C19625900E9EB28 /* 第三方库 */,
 				39FC03D51C19622A00E9EB28 /* 其他 */,
 				39FC03D71C19622A00E9EB28 /* 主项目 */,
@@ -955,6 +1314,7 @@
 		39FC03D71C19622A00E9EB28 /* 主项目 */ = {
 			isa = PBXGroup;
 			children = (
+				390575F31C47847500208D54 /* 网络主Model */,
 				39F4AD2C1C27B9C40044DC40 /* MLButton */,
 				39F593DA1C45F01C00D148B8 /* MLTableView */,
 				39F4AD291C27AE3C0044DC40 /* MLTabBarController */,
@@ -1017,6 +1377,8 @@
 		39FC03E61C19622A00E9EB28 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				390575EE1C477FE000208D54 /* 轮播器 */,
+				390575EF1C477FE000208D54 /* 新闻 */,
 				39F068781C323F4D0062CC1F /* MLHomeCellModel.swift */,
 				39A197051C326DAF009214E2 /* MLHomeCellFrame.swift */,
 			);
@@ -1034,6 +1396,7 @@
 		39FC03ED1C19625900E9EB28 /* 第三方库 */ = {
 			isa = PBXGroup;
 			children = (
+				390576191C47D91500208D54 /* 数据库第三方 */,
 				39F593CB1C44C37100D148B8 /* 指纹解锁 */,
 				39847F581C3FCB9B00AD7B98 /* 手势解锁 */,
 				39A197071C328C63009214E2 /* ML工具 */,
@@ -1056,6 +1419,8 @@
 			children = (
 				39FC03EF1C19625900E9EB28 /* MLCoreDataTool.h */,
 				39FC03F01C19625900E9EB28 /* MLCoreDataTool.m */,
+				390576101C47B1FF00208D54 /* sdafadsf.h */,
+				390576111C47B1FF00208D54 /* sdafadsf.m */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -1437,35 +1802,55 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3905767C1C47D91500208D54 /* NSData+Param.m in Sources */,
+				390576791C47D91500208D54 /* CoreHttp.m in Sources */,
+				390576731C47D91500208D54 /* NSString+CoreFMDB.m in Sources */,
 				39F593E31C4643F800D148B8 /* MLTsszController.swift in Sources */,
+				390576801C47D91500208D54 /* CoreModel.m in Sources */,
+				3905767D1C47D91500208D54 /* NSString+File.m in Sources */,
+				3905767B1C47D91500208D54 /* NSData+MimeType.m in Sources */,
+				3905768A1C47D91500208D54 /* NSObject+Select.m in Sources */,
+				390576091C4790B100208D54 /* LBData+CoreDataProperties.m in Sources */,
 				39FC04071C19625900E9EB28 /* MD5Tool.m in Sources */,
+				390575F11C477FF500208D54 /* MLLBModel.swift in Sources */,
+				3905768F1C47D91500208D54 /* CoreStatus.m in Sources */,
 				3941FBE21C296A0E003ECCFC /* MLFjyyGDController.swift in Sources */,
+				3905767E1C47D91500208D54 /* NSURL+File.m in Sources */,
 				39E7099D1C1FDBB8005462C3 /* TAAnimatedDotView.m in Sources */,
 				39E43F831C3F627C00C8117C /* MLCoreConstController.swift in Sources */,
 				39F068791C323F4D0062CC1F /* MLHomeCellModel.swift in Sources */,
 				39F593D31C44C37100D148B8 /* FingerPrintVerify.m in Sources */,
+				390576811C47D91500208D54 /* NSArray+CoreModel.m in Sources */,
 				39F4AD2B1C27AE580044DC40 /* MLTabBarController.swift in Sources */,
 				396304BC1C34FF3200494868 /* MLWyyyController.swift in Sources */,
 				39847F741C3FCF1600AD7B98 /* PCLockLabel.m in Sources */,
+				390576831C47D91500208D54 /* CoreModel+Cache.m in Sources */,
 				396304B41C34FEE900494868 /* MLCyxjController.swift in Sources */,
 				39847F631C3FCB9B00AD7B98 /* PCCircle.m in Sources */,
+				390576081C4790B100208D54 /* LBData.m in Sources */,
 				39E7098B1C1FABD8005462C3 /* MLViewController.swift in Sources */,
+				390576861C47D91500208D54 /* NSObject+Create.m in Sources */,
 				39A197101C328C63009214E2 /* NSDate+MLDate.m in Sources */,
 				39FC03EB1C19622A00E9EB28 /* MLSideslipView.swift in Sources */,
 				39847F731C3FCF1600AD7B98 /* PCCircleInfoView.m in Sources */,
 				39A1970F1C328C63009214E2 /* NSDate+MJ.m in Sources */,
 				39F068771C323F290062CC1F /* MLHomeTableViewCell.swift in Sources */,
+				390576891C47D91500208D54 /* NSObject+Save.m in Sources */,
 				396304BE1C34FF4200494868 /* MLYspbController.swift in Sources */,
 				396304BA1C34FF2500494868 /* MLWdysController.swift in Sources */,
 				3941FBBD1C295657003ECCFC /* HMAnnotationView.m in Sources */,
+				390576821C47D91500208D54 /* NSDictionary+Sqlite.m in Sources */,
 				39FC04191C1A7C8400E9EB28 /* MLForumController.swift in Sources */,
+				3905768E1C47D91500208D54 /* CoreModelConst.m in Sources */,
 				39847F6C1C3FCE9900AD7B98 /* GestureVerifyViewController.m in Sources */,
 				39F593E51C464DF500D148B8 /* MLZtdxController.swift in Sources */,
 				39F593DC1C45F03300D148B8 /* MLTableView.swift in Sources */,
 				39FC03E91C19622A00E9EB28 /* MLNavigationBar.swift in Sources */,
 				39F593D41C44C37100D148B8 /* InputPasswordView.m in Sources */,
+				390575F91C478F3100208D54 /* yijiaData.xcdatamodeld in Sources */,
 				39FC04081C19625900E9EB28 /* MLInterface.m in Sources */,
 				39F593D51C44C37100D148B8 /* TouchInstance.m in Sources */,
+				390576721C47D91500208D54 /* CoreFMDB.m in Sources */,
 				39E709A21C1FDBB8005462C3 /* UIView+SDExtension.m in Sources */,
 				39FC041D1C1A7DBE00E9EB28 /* MLTestController.swift in Sources */,
 				39E709891C1FAB3B005462C3 /* MLTableViewController.swift in Sources */,
@@ -1478,10 +1863,17 @@
 				39FC040B1C19625900E9EB28 /* IWHttpTool.m in Sources */,
 				3941FC3F1C2BFE3F003ECCFC /* MLDTCellModel.swift in Sources */,
 				39847F661C3FCB9B00AD7B98 /* CALayer+Anim.m in Sources */,
+				390576881C47D91500208D54 /* NSObject+Insert.m in Sources */,
 				396304B61C34FEFF00494868 /* MLMrlbController.swift in Sources */,
+				3905767F1C47D91500208D54 /* UploadFile.m in Sources */,
+				390576871C47D91500208D54 /* NSObject+Delete.m in Sources */,
+				390576121C47B1FF00208D54 /* sdafadsf.m in Sources */,
 				39FC041B1C1A7D7400E9EB28 /* MLNewsController.swift in Sources */,
+				3905767A1C47D91500208D54 /* NSString+CoreHttp.m in Sources */,
 				39FC03EA1C19622A00E9EB28 /* MLNavigationContrller.swift in Sources */,
 				3941FBF71C2BB5D9003ECCFC /* MLFjyyBaiduDTController.swift in Sources */,
+				390576841C47D91500208D54 /* CoreModel+Compare.m in Sources */,
+				390576851C47D91500208D54 /* NSObject+CoreModelCommon.m in Sources */,
 				39A197121C336C98009214E2 /* MLGongju.swift in Sources */,
 				39E7099F1C1FDBB8005462C3 /* TAPageControl.m in Sources */,
 				3941FBB41C28F605003ECCFC /* MLFjyyController.swift in Sources */,
@@ -1492,12 +1884,16 @@
 				39E7099C1C1FDBB8005462C3 /* TAAbstractDotView.m in Sources */,
 				3941FBBC1C295657003ECCFC /* HMAnnotation.m in Sources */,
 				39E709A11C1FDBB8005462C3 /* SDCycleScrollView.m in Sources */,
+				3905768B1C47D91500208D54 /* NSObject+Update.m in Sources */,
+				3905768D1C47D91500208D54 /* NSString+Stackoverflow.m in Sources */,
 				39FC04051C19625900E9EB28 /* MBProgressHUD+MJ.m in Sources */,
 				39F593E11C46373100D148B8 /* MLSzController.swift in Sources */,
 				39FC03E81C19622A00E9EB28 /* AppDelegate.swift in Sources */,
 				39847F651C3FCB9B00AD7B98 /* PCCircleViewConst.m in Sources */,
 				39FC040A1C19625900E9EB28 /* MLUserInfo.m in Sources */,
+				3905768C1C47D91500208D54 /* NSOperationQueue+Queue.m in Sources */,
 				39F4AD2E1C27B9DD0044DC40 /* MLButton.swift in Sources */,
+				390575F51C47848300208D54 /* MLWebModel.swift in Sources */,
 				396304B81C34FF1200494868 /* MLTzzxController.swift in Sources */,
 				39FC03EC1C19622A00E9EB28 /* MLHomeController.swift in Sources */,
 			);
@@ -1795,6 +2191,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		390575F71C478F3100208D54 /* yijiaData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				390575F81C478F3100208D54 /* yijiaData.xcdatamodel */,
+			);
+			currentVersion = 390575F81C478F3100208D54 /* yijiaData.xcdatamodel */;
+			path = yijiaData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 39FC039C1C19618200E9EB28 /* Project object */;
 }

@@ -52,5 +52,13 @@
 
 #import "UIImage+ImageWithColor.h"//颜色生成图片
 
+#import "MJExtension.h"//json解析
+
+/********************数据库***************************/
+#import "MLCoreDataTool.h"//封装的数据库操作
+#import "LBData.h"//轮播图data
+#import "LBData+CoreDataProperties.h"
+#import "CoreModel.h"
+/****************************************************/
 
 

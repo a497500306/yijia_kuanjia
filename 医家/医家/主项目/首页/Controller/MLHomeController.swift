@@ -14,9 +14,12 @@ class MLHomeController: MLViewController , SDCycleScrollViewDelegate ,UITableVie
     var images : NSArray!
     /// 侧滑栏文字数组
     var texts : NSArray!
+    var lunbo : SDCycleScrollView!
     var tableDatas : NSMutableArray!
     var tableView = MLTableView()
     var chTableView = UITableView()
+    //轮播图跳转URL
+    var LBUrls : NSMutableArray! = NSMutableArray()
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         self.tabBarController!.title = "首页"
@@ -37,11 +40,24 @@ class MLHomeController: MLViewController , SDCycleScrollViewDelegate ,UITableVie
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        //网络请求
+        //轮播图网络请求
         let params : NSMutableDictionary = ["":""]
-        IWHttpTool.postWithURL("http://192.168.1.229:8080/jeefw/app/headnews/find", params: params as [NSObject : AnyObject], success: { ( json) -> Void in
-            
-            
+        IWHttpTool.postWithURL("http://192.168.1.229:8080/yj/app/headnews/query", params: params as [NSObject : AnyObject], success: { ( json) -> Void in
+            let model = MLWebModel(keyValues: json)
+            let arrays : NSMutableArray = MLLBModel.objectArrayWithKeyValuesArray(model.data)
+            //更新轮播数据
+            let imgs : NSMutableArray = NSMutableArray()
+            let texts : NSMutableArray = NSMutableArray()
+            for var i = 0 ; i < arrays.count ; i++ {
+                let mm : MLLBModel = arrays[i] as! MLLBModel
+                imgs.addObject(mm.imgUrl)
+                texts.addObject(mm.title)
+                self.LBUrls.addObject(mm.hrefUrl)
+            }
+            self.lunbo.imageURLStringsGroup = imgs as [AnyObject]
+            self.lunbo.titlesGroup = texts as [AnyObject]
+            //添加数据到数据库
+            MLLBModel.inserts(arrays as [AnyObject], resBlock: nil)
             }) { ( erre ) -> Void in
                 
                 
@@ -206,6 +222,7 @@ class MLHomeController: MLViewController , SDCycleScrollViewDelegate ,UITableVie
         let imagesURLStrings = ["http://pic2.ooopic.com/01/03/51/25b1OOOPIC19.jpg","https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a41eb338dd33c895a62bcb3bb72e47c2/5fdf8db1cb134954a2192ccb524e9258d1094a1e.jpg","http://c.hiphotos.baidu.com/image/w%3D400/sign=c2318ff84334970a4773112fa5c8d1c0/b7fd5266d0160924c1fae5ccd60735fae7cd340d.jpg"
         ]
         cycleScrollView.imageURLStringsGroup = imagesURLStrings
+        self.lunbo = cycleScrollView
         
         //创建按钮
         let images = ["每日量表_nor","我的医生_nor","出院小结_nor","我的预约_nor","医院排班_nor","附近医院_nor","通知中心_nor","住院情况_nor"]
@@ -349,7 +366,27 @@ class MLHomeController: MLViewController , SDCycleScrollViewDelegate ,UITableVie
     }
     //MARK: - SDCycleScrollViewDelegate
     func cycleScrollView(cycleScrollView: SDCycleScrollView!, didSelectItemAtIndex index: Int) {
-        print("点击了第\(index)张图片..")
+        if index == 0 {//点击第一张图片
+            let webC = SVWebViewController(URL: NSURL(string: self.LBUrls[index] as! String))
+            webC.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(webC, animated: true)
+        }else if index == 1 {
+            let webC = SVWebViewController(URL: NSURL(string: self.LBUrls[index] as! String))
+            webC.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(webC, animated: true)
+        }else if index == 2 {
+            let webC = SVWebViewController(URL: NSURL(string: self.LBUrls[index] as! String))
+            webC.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(webC, animated: true)
+        }else if index == 3 {
+            let webC = SVWebViewController(URL: NSURL(string: self.LBUrls[index] as! String))
+            webC.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(webC, animated: true)
+        }else if index == 4 {
+            let webC = SVWebViewController(URL: NSURL(string: self.LBUrls[index] as! String))
+            webC.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(webC, animated: true)
+        }
     }
     //MARK: - tableView代理和数据源方法
     //多少行
