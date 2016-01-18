@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14F27" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="EM_ChatConversation" representedClassName="EM_ChatConversation" syncable="YES">
+        <attribute name="chatter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="editor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="modify" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="EM_ChatEmoji" representedClassName="EM_ChatEmoji" syncable="YES">
+        <attribute name="calculate" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="emoji" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="modify" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="EM_ChatExtend" representedClassName="EM_ChatExtend" syncable="YES">
+        <attribute name="extendClass" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="extendIdentifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="extendView" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="EM_ChatMessage" representedClassName="EM_ChatMessage" syncable="YES">
+        <attribute name="chatter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="checking" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="collected" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="details" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="messageId" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="EM_ChatConversation" positionX="-189" positionY="-108" width="128" height="105"/>
+        <element name="EM_ChatEmoji" positionX="-36" positionY="-108" width="128" height="90"/>
+        <element name="EM_ChatMessage" positionX="-189" positionY="183" width="128" height="118"/>
+        <element name="EM_ChatExtend" positionX="-189" positionY="72" width="128" height="88"/>
+    </elements>
+</model>

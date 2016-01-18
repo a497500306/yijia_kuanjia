@@ -1,0 +1,140 @@
+/* 
+  EM_ChatStrings.strings
+  EaseMobUI
+
+  Created by 周玉震 on 15/7/24.
+  Copyright (c) 2015年 周玉震. All rights reserved.
+*/
+
+
+common.cancel = "取消";
+common.enter = "确定";
+common.open = "打开";
+common.send = "发送";
+common.lately = "最近";
+common.call = "呼叫";
+
+common.image = "图片";
+common.camera = "相机";
+common.voice = "语音";
+common.video = "视频";
+common.location = "位置";
+common.file = "文件";
+
+common.copy = "复制";
+common.collect_face = "添加到表情";
+common.download = "下载";
+common.collect = "收藏";
+common.collect_cancel = "取消收藏";
+common.forward = "转发";
+common.revocation = "撤回";
+common.delete = "删除";
+common.close = "关闭";
+common.group_manage = "分组管理";
+common.group_name = "我的好友";
+common.new_buddy = "新朋友";
+common.buddy = "好友";
+common.group_room = "群组";
+common.blacklist = "黑名单";
+
+common.message = "消息";
+common.contact = "联系人";
+
+common.monday = "星期一";
+common.tuesday = "星期二";
+common.wednesday = "星期三";
+common.thursday = "星期四";
+common.friday = "星期五";
+common.saturday = "星期六";
+common.sunday = "星期日";
+common.yesterday = "昨天";
+common.theDayBeforeYesterday = "前天";
+
+common.message_type_text = "[文字]";
+common.message_type_image = "[图片]";
+common.message_type_video = "[视频]";
+common.message_type_voice = "[语音]";
+common.message_type_file = "[文件]";
+common.message_type_location = "[位置]";
+common.message_type_call_voice = "[语音电话]";
+common.message_type_call_video = "[视频电话]";
+common.message_type_unkown = "[未知消息]";
+common.message_draft = "[草稿]";
+common.message_unit = "条";
+
+common.hint.delete.failure = "删除失败";
+common.hint.collect.failure = "收藏失败";
+
+record.will_cancel = "松开取消发送";
+record.will_audition = "松开试听";
+record.normal_record = "按住说话";
+record.will_record = "准备中...";
+
+buddy.new = "新朋友";
+buddy.group = "群组";
+buddy.room = "讨论组";
+buddy.blacklist = "黑名单";
+
+call.in = "%@\n\n正在呼叫您...";
+call.out = "%@\n\n正在等待接听...";
+call.ongoing = "%@\n\n正在通话\n%@";
+call.end = "%@\n\n通话结束\n%@";
+call.hangup = "%@\n\n对方已挂断";
+call.reject = "%@\n\n对方已拒绝";
+call.interrupt = "%@\n\n您已挂断";
+call.offline = "%@\n\n对方不在线,请稍后再拨";
+call.no_response = "%@\n\n对方未接听,请稍后再拨";
+call.busy = "%@\n\n对方正忙,请稍后再拨";
+call.no_answer = "%@\n\n您未接听";
+call.message.hint.reject = "已拒绝，点击回拨";
+call.message.hint.no_response = "未接听，点击回拨";
+call.message.hint.opposite_cancel = "对方已取消，点击回拨";
+call.message.hint.own_cancel = "已取消，点击重拨";
+call.message.hint.end = "通话时间%@，点击重拨";
+call.message.hint.opposite_no_response = "对方未接听，点击重拨";
+call.title_interrupt = "挂断";
+call.title_reject = "拒绝";
+call.title_agree  = "接听";
+call.title_silence = "静音";
+call.title_expand = "免提";
+
+file.document = "文档";
+file.video = "视频";
+file.image = "相册";
+file.audio = "音频";
+file.other = "其它";
+file.wifi_upload = "WiFi上传";
+
+wifi.server_web_title = "%@ - WiFi上传";
+wifi.server_title = "WIFI服务已开启";
+wifi.server_warn = "上传过程中请勿离开此页或锁屏";
+wifi.server_hint = "在电脑浏览器地址栏中输入";
+wifi.server_file_upload_exist = "文件已存在";
+wifi.server_file_upload_big = "文件过大";
+wifi.server_file_upload_failure = "文件上传失败";
+wifi.server_file_upload_success = "文件上传成功";
+wifi.server_file_delete_success = "文件删除成功";
+wifi.server_file_delete_failure = "文件删除失败:%@";
+
+hint.may_phone = "[%@]这可能是一个电话号码，你可以";
+hint.may_link = "[%@]这可能是一个网址，你可以";
+hint.extrude = "您已被踢出";
+
+notification.image_display = "发来了一张图片";
+notification.location_display = "共享了一个位置";
+notification.voice_display = "发来了一段语音";
+notification.other_display = "发来了一个新消息";
+notification.have_new_message = "您有一条新消息";
+notification.call_audio = "%@要和您进行语音通话...";
+notification.call_video = "%@要和您进行视频通话...";
+notification.call = "%@要和您进行通话...";
+
+error.device.not_support_photo_library = "设备不支持图片库";
+error.device.not_support_camera = "设备不支持相机";
+error.record.too_short = "录音时间太短";
+error.record.failure = "录音失败";
+
+error.hint.function_null = "功能未实现";
+error.hint.vioce = "无法开始实时语音";
+error.hint.video = "无法开始实时视频";
+error.hint.open_frontCamera = "该设备不支持视频";

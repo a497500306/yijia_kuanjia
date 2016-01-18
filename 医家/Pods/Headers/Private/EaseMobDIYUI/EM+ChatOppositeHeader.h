@@ -1,0 +1,1 @@
+../../../EaseMobDIYUI/EaseMobUI/EaseMobUI/View/Buddy/EM+ChatOppositeHeader.h

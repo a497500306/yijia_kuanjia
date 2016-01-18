@@ -20,6 +20,12 @@ class MLNewsController: MLViewController {
         righBtn.addTarget(self, action: "dianjiNavZuoshangjiao", forControlEvents: UIControlEvents.TouchUpInside)
         let rightBarItem = UIBarButtonItem(customView: righBtn)
         self.navigationItem.leftBarButtonItem = rightBarItem
+        let btn : UIButton = UIButton()
+        btn.frame = CGRectMake(100, 100, 100, 100)
+        btn.setTitle("聊天界面", forState: UIControlState.Normal)
+        btn.backgroundColor = UIColor.blueColor()
+        btn.addTarget(self, action: "点击聊天", forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(btn)
     }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -33,5 +39,9 @@ class MLNewsController: MLViewController {
             super.sideslipView.userInteractionEnabled = true
             super.sideslipView.toolbar.userInteractionEnabled = true
         })
+    }
+    func 点击聊天(){
+        let mrilb : MLBuddyLisController = MLBuddyLisController()
+        self.navigationController?.pushViewController(mrilb, animated: true)
     }
 }

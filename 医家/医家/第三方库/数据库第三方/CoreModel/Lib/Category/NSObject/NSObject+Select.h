@@ -11,7 +11,14 @@
 @interface NSObject (Select)
 
 
-
+/**
+ *
+ *  @param where              还不知道
+ *  @param groupBy            组
+ *  @param orderBy            顺序
+ *  @param limit              还不知道
+ *  @param selectResultsBlock 返回结果
+ */
 +(void)selectWhere:(NSString *)where groupBy:(NSString *)groupBy orderBy:(NSString *)orderBy limit:(NSString *)limit selectResultsBlock:(void(^)(NSArray *selectResults))selectResultsBlock;
 
 

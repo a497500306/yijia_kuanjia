@@ -67,7 +67,7 @@ class MLZtdxController: UIViewController , UIAlertViewDelegate {
         da.frame = CGRectMake(0, 160, self.view.frame.width, 80)
         da.font = Theme.大字体
         da.numberOfLines = 0
-        da.text = "设置完成之后请退出APP重新打开"
+        da.text = "医患一家亲--医家"
         da.textColor = Theme.baseBackgroundColor
         da.textAlignment = NSTextAlignment.Center
         self.da = da

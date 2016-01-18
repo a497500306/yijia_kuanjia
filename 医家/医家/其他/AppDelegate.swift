@@ -39,6 +39,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if (!ret) {
             
         }
+        //环信注册
+        //这里需要推送证书
+        EaseMob.sharedInstance().registerSDKWithAppKey("13055031#yijia", apnsCertName: nil)
+        EaseMobUIClient.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        EaseMobUIClient.sharedInstance().registerForRemoteNotificationsWithApplication(application)//你也可以自己注册APNS
+//        EaseMobUIClient.sharedInstance().userDelegate = self //EM_ChatUserDelegate
+//        EaseMobUIClient.sharedInstance().oppositeDelegate = self //EM_ChatOppositeDelegate
+//        EaseMobUIClient.sharedInstance().notificationDelegate = self//EM_ChatNotificationDelegate
+        //判断是否设置自动登陆
+        let isAutoLogin : Bool = EaseMob.sharedInstance().chatManager.isAutoLoginEnabled!
+        if !isAutoLogin {
+            EaseMob.sharedInstance().chatManager.asyncLoginWithUsername("ml", password: "123", completion: { (loginInfo, error ) -> Void in
+                if error == nil {
+                    print("登陆成功")
+                    //开启自动登.想知道什么意思,进去看注释
+                    MLJson.fuckSetIsAutoLoginEnabled()
+                }else{
+                    print("登陆错误\(error.errorCode)")
+                }
+            }, onQueue: nil)
+        }
+        
         //友盟统计
         MobClick.startWithAppkey("568dbbd5e0f55a94a000084b", reportPolicy: BATCH, channelId: nil)
         //判断是否有密码
@@ -65,10 +87,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillResignActive(application: UIApplication) {//将进入后台
-        
+        EaseMobUIClient.sharedInstance().applicationWillResignActive(application)
     }
 
     func applicationDidEnterBackground(application: UIApplication) {//进入后台
+        EaseMobUIClient.sharedInstance().applicationDidEnterBackground(application)
         //判断是否有密码
         //计算字符串长度
         let str  = PCCircleViewConst.getGestureWithKey(gestureFinalSaveKey)
@@ -92,6 +115,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(application: UIApplication) {//即将进入前台
+        EaseMobUIClient.sharedInstance().applicationWillEnterForeground(application)
         //登陆时判断是否打开指纹解锁
         MLUserInfo.sharedMLUserInfo().loadUserInfoFromSanbox()
         if (MLUserInfo.sharedMLUserInfo().zwjs != nil) {//打开了指纹解锁
@@ -100,9 +124,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     func applicationDidBecomeActive(application: UIApplication) {//进入前台
+        EaseMobUIClient.sharedInstance().applicationDidBecomeActive(application)
     }
 
     func applicationWillTerminate(application: UIApplication) {
+        EaseMobUIClient.sharedInstance().applicationWillTerminate(application)
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     func application(application: UIApplication, performFetchWithCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
@@ -182,6 +208,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-    
+    func applicationProtectedDataWillBecomeUnavailable(application: UIApplication) {
+        EaseMobUIClient.sharedInstance().applicationProtectedDataWillBecomeUnavailable(application)
+    }
+    func applicationProtectedDataDidBecomeAvailable(application: UIApplication) {
+        EaseMobUIClient.sharedInstance().applicationProtectedDataDidBecomeAvailable(application)
+    }
+    func applicationDidReceiveMemoryWarning(application: UIApplication) {
+        EaseMobUIClient.sharedInstance().applicationDidReceiveMemoryWarning(application)
+    }
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        EaseMobUIClient.sharedInstance().application(application, didRegisterForRemoteNotificationsWithDeviceToken: deviceToken)
+    }
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        EaseMobUIClient.sharedInstance().application(application, didFailToRegisterForRemoteNotificationsWithError: error)
+    }
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        EaseMobUIClient.sharedInstance().application(application, didReceiveRemoteNotification: userInfo)
+    }
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        EaseMobUIClient.sharedInstance().application(application, didReceiveLocalNotification: notification)
+    }
+    //环信登陆
+    func userForEMChat() -> EM_ChatUser! {
+        let user = EM_ChatUser()
+        user.uid = "ml"
+        user.displayName = "毛哥哥是神"
+        user.intro = "神就是不用吃饭可以带你飞的人"
+        user.avatar = nil
+        return user
+    }
 }
 

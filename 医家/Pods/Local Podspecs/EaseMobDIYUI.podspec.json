@@ -1,0 +1,88 @@
+{
+  "name": "EaseMobDIYUI",
+  "version": "0.2.6",
+  "summary": "环信DIY聊天UI",
+  "description": "环信DIY聊天UI.\n\n* 方便集成环信的开发者,快速的开发和定制自己的聊天界面\n* 快速,简单,集成",
+  "homepage": "https://github.com/AwakenDragon/EaseMobDIYUI",
+  "license": "MIT",
+  "authors": {
+    "周玉震": "940549652@qq.com"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "source": {
+    "git": "https://github.com/AwakenDragon/EaseMobDIYUI.git",
+    "tag": "0.2.6"
+  },
+  "resources": [
+    "EaseMobUI/Resource/EM_Resource.bundle",
+    "EaseMobUI/Resource/EM_ChatStrings.strings",
+    "EaseMobUI/Resource/EM_Web.bundle",
+    "EaseMobUI/Resource/EM_ChatModel.xcdatamodeld",
+    "EaseMobUI/EaseMobUI/Common/Rdparty/GPUImage/framework/Resources/**/*"
+  ],
+  "frameworks": [
+    "UIKit",
+    "MapKit",
+    "Foundation",
+    "CoreData"
+  ],
+  "requires_arc": true,
+  "dependencies": {
+    "SDWebImage": [
+      "3.7.3"
+    ],
+    "MJRefresh": [
+      "2.4.7"
+    ],
+    "MWPhotoBrowser": [
+      "2.1.1"
+    ],
+    "MBProgressHUD": [
+      "0.9.1"
+    ],
+    "TTTAttributedLabel": [
+      "1.13.4"
+    ],
+    "SWTableViewCell": [
+      "0.3.7"
+    ],
+    "FXBlurView": [
+      "1.6.3"
+    ],
+    "JSONModel": [
+      "1.1.0"
+    ],
+    "pop": [
+      "1.0.7"
+    ]
+  },
+  "subspecs": [
+    {
+      "name": "Main",
+      "source_files": "EaseMobUI/EaseMobUI/Main/**/*.{h,m}",
+      "public_header_files": "EaseMobUI/EaseMobUI/Main/**/*.h"
+    },
+    {
+      "name": "Controller",
+      "source_files": "EaseMobUI/EaseMobUI/Controller/**/*.{h,m}",
+      "public_header_files": "EaseMobUI/EaseMobUI/Controller/**/*.h"
+    },
+    {
+      "name": "View",
+      "source_files": "EaseMobUI/EaseMobUI/View/**/*.{h,m}",
+      "public_header_files": "EaseMobUI/EaseMobUI/View/**/*.h"
+    },
+    {
+      "name": "Model",
+      "source_files": "EaseMobUI/EaseMobUI/Model/**/*.{h,m}",
+      "public_header_files": "EaseMobUI/EaseMobUI/Model/**/*.h"
+    },
+    {
+      "name": "Common",
+      "source_files": "EaseMobUI/EaseMobUI/Common/**/*.{h,m}",
+      "public_header_files": "EaseMobUI/EaseMobUI/Common/*.h"
+    }
+  ]
+}

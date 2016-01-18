@@ -1,0 +1,14 @@
+body {
+    background-color: #EDF0F4;
+    padding: 50px 0 0 0;
+}
+.drag-area {
+    border: 3px dashed #d1d1d1;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    padding: 50px;
+}
+td > .fa {
+    cursor: pointer;
+}

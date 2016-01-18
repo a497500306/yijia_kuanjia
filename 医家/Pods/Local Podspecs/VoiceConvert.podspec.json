@@ -1,0 +1,45 @@
+{
+  "name": "VoiceConvert",
+  "version": "0.0.2",
+  "summary": "iOS音频文件转换",
+  "homepage": "https://github.com/AwakenDragon/VoiceConvert",
+  "license": "MIT",
+  "authors": {
+    "AwakenDragon": "940549652@qq.com"
+  },
+  "platforms": {
+    "ios": "6.0"
+  },
+  "source": {
+    "git": "https://github.com/AwakenDragon/VoiceConvert.git",
+    "tag": "0.0.2"
+  },
+  "frameworks": "Foundation",
+  "vendored_libraries": [
+    "VoiceConvert/opencore-amrnb/libopencore-amrnb.a",
+    "VoiceConvert/opencore-amrwb/libopencore-amrwb.a"
+  ],
+  "requires_arc": true,
+  "subspecs": [
+    {
+      "name": "VoiceConvert",
+      "source_files": "VoiceConvert/VoiceConvert/**/*",
+      "public_header_files": "VoiceConvert/VoiceConvert/**/*.h"
+    },
+    {
+      "name": "amrwapper",
+      "source_files": "VoiceConvert/amrwapper/**/*",
+      "public_header_files": "VoiceConvert/amrwapper/**/*.h"
+    },
+    {
+      "name": "opencore-amrnb",
+      "source_files": "VoiceConvert/opencore-amrnb/**/*",
+      "public_header_files": "VoiceConvert/opencore-amrnb/**/*.h"
+    },
+    {
+      "name": "opencore-amrwb",
+      "source_files": "VoiceConvert/opencore-amrwb/**/*",
+      "public_header_files": "VoiceConvert/opencore-amrwb/**/*.h"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+../../../EaseMobDIYUI/EaseMobUI/EaseMobUI/Model/Message/EM+ChatMessageExtendFile.h

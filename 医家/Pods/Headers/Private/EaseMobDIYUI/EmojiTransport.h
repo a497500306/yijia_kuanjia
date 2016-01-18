@@ -1,0 +1,1 @@
+../../../EaseMobDIYUI/EaseMobUI/EaseMobUI/Common/Rdparty/Emoji/EmojiTransport.h

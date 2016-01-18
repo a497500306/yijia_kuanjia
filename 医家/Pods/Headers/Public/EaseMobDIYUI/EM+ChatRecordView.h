@@ -1,0 +1,1 @@
+../../../EaseMobDIYUI/EaseMobUI/EaseMobUI/View/ChatBar/Tool/EM+ChatRecordView.h

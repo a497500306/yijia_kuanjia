@@ -6,7 +6,7 @@
 //  Copyright © 2015年 workorz. All rights reserved.
 //
 
-#import "GPUImage.h"
+//#import <GPUImage/GPUImage.h>
 #import "FXBlurView.h"
 #import "IWHttpTool.h"
 #import "SDCycleScrollView.h"
@@ -53,12 +53,20 @@
 #import "UIImage+ImageWithColor.h"//颜色生成图片
 
 #import "MJExtension.h"//json解析
+#import "MLJson.h"
+/*********************环信****************************/
+#import "EaseMobUIClient.h"
+#import "EM+ChatController.h"//聊天界面
+#import "EMConversation.h"//会话对象
+#import "EM+BuddyListController.h"//好友列表
+#import "MLChatViewController.h"//ML聊天界面
+#import "EaseMob.h"
+/****************************************************/
 
 /********************数据库***************************/
-#import "MLCoreDataTool.h"//封装的数据库操作
-#import "LBData.h"//轮播图data
-#import "LBData+CoreDataProperties.h"
 #import "CoreModel.h"
+#import "MLMrlbModels.h"//每日量表模型
 /****************************************************/
+#import "TXSoundPlayer.h"
 
 
