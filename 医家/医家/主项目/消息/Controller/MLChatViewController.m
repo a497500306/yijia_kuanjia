@@ -32,7 +32,6 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.translucent = YES;
     // Do any additional setup after loading the view.
 }
 
@@ -43,6 +42,10 @@
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     self.navigationController.navigationBar.translucent = NO;
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.translucent = YES;
 }
 #define mark - EM_ChatControllerDelegate
 //- (void)extendForMessage:(EM_ChatMessageModel *)message{
