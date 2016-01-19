@@ -13,4 +13,8 @@ class MLMrlbCellModel: NSObject {
     var name : String! = String()
     /// 内容
     var text : NSString!
+    //选项ID
+    var nameID : NSString!
+    //内容ID
+    var textID : NSString!
 }

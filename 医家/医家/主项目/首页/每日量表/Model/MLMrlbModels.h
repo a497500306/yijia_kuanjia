@@ -21,4 +21,8 @@
  *  选项数组
  */
 @property (nonatomic , strong)NSArray * option;
+/**
+ *  选项数组key
+ */
+@property (nonatomic , strong)NSArray * optionKey;
 @end

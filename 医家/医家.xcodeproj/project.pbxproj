@@ -101,16 +101,19 @@
 		39EDAB7D1C48EEA6009F4AFF /* MLMrlbCellFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EDAB7C1C48EEA6009F4AFF /* MLMrlbCellFrame.swift */; };
 		39EDAB811C490578009F4AFF /* TXSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EDAB801C490578009F4AFF /* TXSoundPlayer.m */; };
 		39EDAB831C4C7DDE009F4AFF /* MLInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EDAB821C4C7DDE009F4AFF /* MLInterface.swift */; };
-		39EDAB891C4C8259009F4AFF /* 正确@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39EDAB851C4C8259009F4AFF /* 正确@2x.png */; };
-		39EDAB8A1C4C8259009F4AFF /* 正确@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39EDAB861C4C8259009F4AFF /* 正确@3x.png */; };
-		39EDAB8B1C4C8259009F4AFF /* 错误@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39EDAB871C4C8259009F4AFF /* 错误@2x.png */; };
-		39EDAB8C1C4C8259009F4AFF /* 错误@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 39EDAB881C4C8259009F4AFF /* 错误@3x.png */; };
 		39EDAB8F1C4CC230009F4AFF /* MLJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EDAB8E1C4CC230009F4AFF /* MLJson.m */; };
 		39EDAB911C4D216D009F4AFF /* MLChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EDAB901C4D216D009F4AFF /* MLChatController.swift */; };
 		39EDAB931C4D27B6009F4AFF /* MLBuddyLisController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EDAB921C4D27B6009F4AFF /* MLBuddyLisController.swift */; };
 		39EDAB961C4D2CD5009F4AFF /* MLChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EDAB951C4D2CD5009F4AFF /* MLChatViewController.m */; };
 		39F068771C323F290062CC1F /* MLHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F068761C323F290062CC1F /* MLHomeTableViewCell.swift */; };
 		39F068791C323F4D0062CC1F /* MLHomeCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F068781C323F4D0062CC1F /* MLHomeCellModel.swift */; };
+		39F490DC1C4E006400BCA10A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F490DB1C4E006400BCA10A /* Foundation.framework */; };
+		39F490DD1C4E008A00BCA10A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 39A197131C338613009214E2 /* libz.tbd */; };
+		39F490E21C4E0CE300BCA10A /* MLWebReturnModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F490E11C4E0CE300BCA10A /* MLWebReturnModel.swift */; };
+		39F490E91C4E33EC00BCA10A /* jpush-ios-2.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F490E71C4E33EC00BCA10A /* jpush-ios-2.1.0.a */; };
+		39F490EB1C4E34A700BCA10A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F490EA1C4E34A700BCA10A /* CFNetwork.framework */; };
+		39F490ED1C4E34AE00BCA10A /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F490EC1C4E34AE00BCA10A /* CoreFoundation.framework */; };
+		39F490EF1C4E34EE00BCA10A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F490EE1C4E34EE00BCA10A /* UIKit.framework */; };
 		39F4AD2B1C27AE580044DC40 /* MLTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F4AD2A1C27AE580044DC40 /* MLTabBarController.swift */; };
 		39F4AD2E1C27B9DD0044DC40 /* MLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F4AD2D1C27B9DD0044DC40 /* MLButton.swift */; };
 		39F593D31C44C37100D148B8 /* FingerPrintVerify.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F593CE1C44C37100D148B8 /* FingerPrintVerify.m */; };
@@ -307,10 +310,6 @@
 		39EDAB7F1C490578009F4AFF /* TXSoundPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXSoundPlayer.h; sourceTree = "<group>"; };
 		39EDAB801C490578009F4AFF /* TXSoundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXSoundPlayer.m; sourceTree = "<group>"; };
 		39EDAB821C4C7DDE009F4AFF /* MLInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLInterface.swift; sourceTree = "<group>"; };
-		39EDAB851C4C8259009F4AFF /* 正确@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "正确@2x.png"; sourceTree = "<group>"; };
-		39EDAB861C4C8259009F4AFF /* 正确@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "正确@3x.png"; sourceTree = "<group>"; };
-		39EDAB871C4C8259009F4AFF /* 错误@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "错误@2x.png"; sourceTree = "<group>"; };
-		39EDAB881C4C8259009F4AFF /* 错误@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "错误@3x.png"; sourceTree = "<group>"; };
 		39EDAB8D1C4CC230009F4AFF /* MLJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLJson.h; sourceTree = "<group>"; };
 		39EDAB8E1C4CC230009F4AFF /* MLJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLJson.m; sourceTree = "<group>"; };
 		39EDAB901C4D216D009F4AFF /* MLChatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLChatController.swift; sourceTree = "<group>"; };
@@ -319,6 +318,13 @@
 		39EDAB951C4D2CD5009F4AFF /* MLChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLChatViewController.m; sourceTree = "<group>"; };
 		39F068761C323F290062CC1F /* MLHomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLHomeTableViewCell.swift; sourceTree = "<group>"; };
 		39F068781C323F4D0062CC1F /* MLHomeCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLHomeCellModel.swift; sourceTree = "<group>"; };
+		39F490DB1C4E006400BCA10A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		39F490E11C4E0CE300BCA10A /* MLWebReturnModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLWebReturnModel.swift; sourceTree = "<group>"; };
+		39F490E71C4E33EC00BCA10A /* jpush-ios-2.1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-2.1.0.a"; sourceTree = "<group>"; };
+		39F490E81C4E33EC00BCA10A /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
+		39F490EA1C4E34A700BCA10A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		39F490EC1C4E34AE00BCA10A /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		39F490EE1C4E34EE00BCA10A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		39F4AD2A1C27AE580044DC40 /* MLTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLTabBarController.swift; sourceTree = "<group>"; };
 		39F4AD2D1C27B9DD0044DC40 /* MLButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLButton.swift; sourceTree = "<group>"; };
 		39F593CD1C44C37100D148B8 /* FingerPrintVerify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FingerPrintVerify.h; sourceTree = "<group>"; };
@@ -371,6 +377,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39F490EF1C4E34EE00BCA10A /* UIKit.framework in Frameworks */,
+				39A1971D1C33923A009214E2 /* SystemConfiguration.framework in Frameworks */,
+				39F490ED1C4E34AE00BCA10A /* CoreFoundation.framework in Frameworks */,
+				39F490EB1C4E34A700BCA10A /* CFNetwork.framework in Frameworks */,
+				39F490E91C4E33EC00BCA10A /* jpush-ios-2.1.0.a in Frameworks */,
+				39F490DD1C4E008A00BCA10A /* libz.tbd in Frameworks */,
+				39F490DC1C4E006400BCA10A /* Foundation.framework in Frameworks */,
 				39F593D91C44D87400D148B8 /* LocalAuthentication.framework in Frameworks */,
 				39A197351C3393B2009214E2 /* libPods.a in Frameworks */,
 				39A197331C3393A6009214E2 /* QuartzCore.framework in Frameworks */,
@@ -392,7 +405,6 @@
 				39A197201C33924F009214E2 /* CoreTelephony.framework in Frameworks */,
 				39A1971F1C339247009214E2 /* MediaPlayer.framework in Frameworks */,
 				39A1971E1C339240009214E2 /* AVFoundation.framework in Frameworks */,
-				39A1971D1C33923A009214E2 /* SystemConfiguration.framework in Frameworks */,
 				39A1971C1C339232009214E2 /* libstdc++.6.0.9.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +445,7 @@
 			isa = PBXGroup;
 			children = (
 				390575F41C47848300208D54 /* MLWebModel.swift */,
+				39F490E11C4E0CE300BCA10A /* MLWebReturnModel.swift */,
 			);
 			path = "网络主Model";
 			sourceTree = "<group>";
@@ -748,7 +761,6 @@
 		3963049B1C34FECA00494868 /* 每日量表 */ = {
 			isa = PBXGroup;
 			children = (
-				39EDAB841C4C8259009F4AFF /* 正确错误 3 */,
 				3963049C1C34FECA00494868 /* Controller */,
 				3963049D1C34FECA00494868 /* Model */,
 				3963049E1C34FECA00494868 /* View */,
@@ -1205,15 +1217,21 @@
 			path = "语音播报";
 			sourceTree = "<group>";
 		};
-		39EDAB841C4C8259009F4AFF /* 正确错误 3 */ = {
+		39F490E51C4E33EC00BCA10A /* 极光推送 */ = {
 			isa = PBXGroup;
 			children = (
-				39EDAB851C4C8259009F4AFF /* 正确@2x.png */,
-				39EDAB861C4C8259009F4AFF /* 正确@3x.png */,
-				39EDAB871C4C8259009F4AFF /* 错误@2x.png */,
-				39EDAB881C4C8259009F4AFF /* 错误@3x.png */,
+				39F490E61C4E33EC00BCA10A /* lib */,
 			);
-			path = "正确错误 3";
+			path = "极光推送";
+			sourceTree = "<group>";
+		};
+		39F490E61C4E33EC00BCA10A /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				39F490E71C4E33EC00BCA10A /* jpush-ios-2.1.0.a */,
+				39F490E81C4E33EC00BCA10A /* JPUSHService.h */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 		39F4AD291C27AE3C0044DC40 /* MLTabBarController */ = {
@@ -1410,6 +1428,7 @@
 		39FC03ED1C19625900E9EB28 /* 第三方库 */ = {
 			isa = PBXGroup;
 			children = (
+				39F490E51C4E33EC00BCA10A /* 极光推送 */,
 				39EDAB7E1C490578009F4AFF /* 语音播报 */,
 				390576191C47D91500208D54 /* 数据库第三方 */,
 				39F593CB1C44C37100D148B8 /* 指纹解锁 */,
@@ -1594,6 +1613,10 @@
 		5F2211B5F826BD70E2875CD5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				39F490EE1C4E34EE00BCA10A /* UIKit.framework */,
+				39F490EC1C4E34AE00BCA10A /* CoreFoundation.framework */,
+				39F490EA1C4E34A700BCA10A /* CFNetwork.framework */,
+				39F490DB1C4E006400BCA10A /* Foundation.framework */,
 				39F593D81C44D87400D148B8 /* LocalAuthentication.framework */,
 				39A197341C3393B2009214E2 /* libPods.a */,
 				39A197131C338613009214E2 /* libz.tbd */,
@@ -1730,16 +1753,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39EDAB8A1C4C8259009F4AFF /* 正确@3x.png in Resources */,
 				39FC03B21C19618200E9EB28 /* LaunchScreen.storyboard in Resources */,
 				3941FC3D1C2BBC2D003ECCFC /* mapapi.bundle in Resources */,
-				39EDAB8C1C4C8259009F4AFF /* 错误@3x.png in Resources */,
-				39EDAB891C4C8259009F4AFF /* 正确@2x.png in Resources */,
 				39FC04061C19625900E9EB28 /* MBProgressHUD.bundle in Resources */,
 				39847F531C3FA64000AD7B98 /* Landed.storyboard in Resources */,
 				39FC03AF1C19618200E9EB28 /* Assets.xcassets in Resources */,
 				39FC03AD1C19618200E9EB28 /* Main.storyboard in Resources */,
-				39EDAB8B1C4C8259009F4AFF /* 错误@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1886,6 +1905,7 @@
 				39FC03EA1C19622A00E9EB28 /* MLNavigationContrller.swift in Sources */,
 				39EDAB791C48EE50009F4AFF /* MLMrlbCell.swift in Sources */,
 				3941FBF71C2BB5D9003ECCFC /* MLFjyyBaiduDTController.swift in Sources */,
+				39F490E21C4E0CE300BCA10A /* MLWebReturnModel.swift in Sources */,
 				390576841C47D91500208D54 /* CoreModel+Compare.m in Sources */,
 				390576851C47D91500208D54 /* NSObject+CoreModelCommon.m in Sources */,
 				39A197121C336C98009214E2 /* MLGongju.swift in Sources */,
@@ -2072,6 +2092,8 @@
 					"$(PROJECT_DIR)/医家/第三方库/百度导航",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 					"$(PROJECT_DIR)/医家/第三方库/友盟统计",
+					"$(PROJECT_DIR)/医家/第三方库/百度云推送/LibBPush",
+					"$(PROJECT_DIR)/医家/第三方库/极光推送/lib",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.workorz.--";
@@ -2107,6 +2129,8 @@
 					"$(PROJECT_DIR)/医家/第三方库/百度导航",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 					"$(PROJECT_DIR)/医家/第三方库/友盟统计",
+					"$(PROJECT_DIR)/医家/第三方库/百度云推送/LibBPush",
+					"$(PROJECT_DIR)/医家/第三方库/极光推送/lib",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.workorz.--";

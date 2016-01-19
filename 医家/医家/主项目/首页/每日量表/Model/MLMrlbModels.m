@@ -10,6 +10,6 @@
 
 @implementation MLMrlbModels
 +(NSDictionary *)statementForNSArrayProperties{
-    return @{@"option":NSStringFromClass([NSString class])};
+    return @{@"option":NSStringFromClass([NSString class]),@"optionKey":NSStringFromClass([NSString class])};
 }
 @end

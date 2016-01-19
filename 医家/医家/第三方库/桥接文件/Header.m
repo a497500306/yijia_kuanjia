@@ -54,6 +54,7 @@
 
 #import "MJExtension.h"//json解析
 #import "MLJson.h"
+#import "JPUSHService.h"//极光推送
 /*********************环信****************************/
 #import "EaseMobUIClient.h"
 #import "EM+ChatController.h"//聊天界面

@@ -59,11 +59,19 @@ class MLMrlbController: UIViewController , UITableViewDelegate , UITableViewData
     }
     //MARK: - 网络请求
     func httpData(){
+        //1.执行网络请求,判断今天时候填写了每日量表
+        let dict : NSDictionary = ["patientId":"1"]
+        let dictWeb : NSDictionary = ["params":MLJson.json(dict as [NSObject : AnyObject])]
+        IWHttpTool.postWithURL(MLInterface.每日量表判断, params: dictWeb as [NSObject : AnyObject], success: { (json) -> Void in
+            print("123123\(json)")
+            //没有填写开始加载数据
+            //填写了
+            }) { (error) -> Void in
+                
+        }
         //网络请求
         let params : NSMutableDictionary = ["":""]
         IWHttpTool.postWithURL(MLInterface.每日量表接收, params: params as [NSObject : AnyObject], success: { ( json) -> Void in
-            //删除数据库
-            MLMrlbModels.truncateTable(nil)
             let model = MLWebModel(keyValues: json)
             print("123\(json)")
             //转ID
@@ -71,6 +79,14 @@ class MLMrlbController: UIViewController , UITableViewDelegate , UITableViewData
                 return ["hostID":"id"]
             })
             let datas : NSMutableArray = MLMrlbModels.objectArrayWithKeyValuesArray(model.data)
+            //比较版本号是否一样,一样的话不需要更新数据
+            if self.datas.count != 0 {//第一次登陆判断
+                let model1 : MLMrlbModels = datas[0] as! MLMrlbModels
+                let model2 : MLMrlbModels = self.datas[0] as! MLMrlbModels
+                if model1.versionCode == model2.versionCode {
+                    return
+                }
+            }
             self.datas = datas
             //设置cellFarme
             let cells : NSMutableArray = NSMutableArray()
@@ -85,6 +101,8 @@ class MLMrlbController: UIViewController , UITableViewDelegate , UITableViewData
             self.cellFarmes = cells
             self.tableView.reloadData()
             self.picker.reloadAllComponents()
+            //删除数据库
+            MLMrlbModels.truncateTable(nil)
             //添加数据到数据库
             MLMrlbModels.saveModels(datas as [AnyObject], resBlock: nil)
             }) { ( erre ) -> Void in
@@ -163,30 +181,27 @@ class MLMrlbController: UIViewController , UITableViewDelegate , UITableViewData
                  return
             }
         }
-        let model : MLMrlbModels = self.datas[0] as! MLMrlbModels
-        let modelFrame0 :MLMrlbCellFrame = self.cellFarmes[0] as! MLMrlbCellFrame
-        let modelFrame1 :MLMrlbCellFrame = self.cellFarmes[1] as! MLMrlbCellFrame
-        let modelFrame2 :MLMrlbCellFrame = self.cellFarmes[2] as! MLMrlbCellFrame
-        let modelFrame3 :MLMrlbCellFrame = self.cellFarmes[3] as! MLMrlbCellFrame
-        let modelFrame4 :MLMrlbCellFrame = self.cellFarmes[4] as! MLMrlbCellFrame
-        let modelFrame5 :MLMrlbCellFrame = self.cellFarmes[5] as! MLMrlbCellFrame
-        let modelFrame6 :MLMrlbCellFrame = self.cellFarmes[6] as! MLMrlbCellFrame
-        let dict : NSDictionary = ["patientId":"1",
-            "optionOne":modelFrame0.cellModel.name,"dailyDosageIdOne":"1",
-            "optionTwo":modelFrame1.cellModel.name,"dailyDosageIdTwo":"2",
-            "optionThree":modelFrame2.cellModel.name,"dailyDosageIdThree":"3",
-            "optionFour":modelFrame3.cellModel.name,"dailyDosageIdFour":"4",
-            "optionFive":modelFrame4.cellModel.name,"dailyDosageIdFive":"5",
-            "optionSix":modelFrame5.cellModel.name,"dailyDosageIdSix":"6",
-            "optionSeven":modelFrame6.cellModel.name,"dailyDosageIdSeven":"7",
-            "versionCode":model.versionCode]
-        let params : NSDictionary = ["params":MLJson.json(dict as [NSObject : AnyObject])]
-//        let dataDict : NSDictionary = ["data":MLJson.json(params as [NSObject : AnyObject])]
-        let dataStr : NSString = "data:[\(params)]"
+        //用户token
+        let dict : NSMutableDictionary = ["patientId":"1"]
+        for var i = 0 ; i < self.cellFarmes.count ; i++ {
+            let modelFrame :MLMrlbCellFrame = self.cellFarmes[i] as! MLMrlbCellFrame
+            dict[modelFrame.cellModel.textID] = modelFrame.cellModel.nameID
+        }
+        let params : NSDictionary = ["params":dict]
+        MBProgressHUD.showMessage("正在提交", toView: self.view)
         IWHttpTool.postWithURL(MLInterface.每日量表提交, params: params as [NSObject : AnyObject], success: { (json) -> Void in
                  print("\(json)")
+            let webReturn  = MLWebReturnModel(keyValues: json)
+            if webReturn.state == "9000" {
+                MBProgressHUD.hideHUDForView(self.view)
+                MBProgressHUD.showSuccess(webReturn.msg as String, toView: self.view)
+            }else{
+                MBProgressHUD.hideHUDForView(self.view)
+                MBProgressHUD.showError(webReturn.msg as String, toView: self.view)
+            }
             }) { (error) -> Void in
-                
+                MBProgressHUD.hideHUDForView(self.view)
+                MBProgressHUD.showError("请检查网络" as String, toView: self.view)
         }
     }
     //MARK: - tableView代理数据源方法
@@ -197,7 +212,7 @@ class MLMrlbController: UIViewController , UITableViewDelegate , UITableViewData
     //点击每行做什么
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //取消选择
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
         //默认选中
         self.picker.selectRow(0, inComponent: 0, animated: true)
         //点击每日量表弹出选择栏
@@ -214,6 +229,8 @@ class MLMrlbController: UIViewController , UITableViewDelegate , UITableViewData
         let modelNew : MLMrlbCellModel = MLMrlbCellModel()
         modelNew.text = modelFrame.cellModel.text
         modelNew.name = sele
+        modelNew.nameID = model.optionKey[row1] as! String
+        modelNew.textID = String(stringInterpolationSegment: model.hostID)
         modelFrame.cellModel = modelNew
         self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
         if self.pickerView.frame.origin.y > Theme.pingmuF.height - 80 {//在底下
@@ -283,6 +300,8 @@ class MLMrlbController: UIViewController , UITableViewDelegate , UITableViewData
         let modelNew : MLMrlbCellModel = MLMrlbCellModel()
         modelNew.text = modelFrame.cellModel.text
         modelNew.name = sele
+        modelNew.nameID = model.optionKey[row1] as! String
+        modelNew.textID = String(stringInterpolationSegment: model.hostID)
         modelFrame.cellModel = modelNew
         self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
     }

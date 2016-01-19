@@ -76,7 +76,7 @@ struct Theme {
             }
         }
     }
-    static let win : UIWindow = UIApplication.sharedApplication().keyWindow!
+    static let win : UIWindow = UIApplication.sharedApplication().windows.last!
     static let appD : AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     static let pingmuF : CGRect = UIScreen.mainScreen().bounds
 }
