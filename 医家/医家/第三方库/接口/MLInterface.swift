@@ -13,4 +13,5 @@ class MLInterface: NSObject {
     static var 每日量表接收 : String = "http://192.168.1.100:8080/yj/app/dailydosage/template"
     static var 每日量表提交 : String = "http://192.168.1.100:8080/yj/app/dailydosage/saveDailyDosageContent?"
     static var 每日量表判断 : String = "http://192.168.1.100:8080/yj/app/dailydosage/getThisDailyDosageContent?"
+    static var 历史量表 : String = "http://192.168.1.100:8080/yj/app/dailydosage/queryDailyDosageContent?"
 }

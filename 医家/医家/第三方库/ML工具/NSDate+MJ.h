@@ -57,6 +57,10 @@
  */
 -(NSDate *)strZhuangDate:(NSString *)str;
 /**
+ *  date转str
+ */
+-(NSString *)dateZhuangStr;
+/**
  *  取出年
  */
 -(NSInteger )quchunian;

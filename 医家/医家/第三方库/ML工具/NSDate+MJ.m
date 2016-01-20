@@ -178,6 +178,18 @@
     NSDate *localeDate = [date  dateByAddingTimeInterval: interval];
     return localeDate;
 }
+-(NSString *)dateZhuangStr{
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    
+    //zzz表示时区，zzz可以删除，这样返回的日期字符将不包含时区信息。
+
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    
+    NSString *destDateString = [dateFormatter stringFromDate:[NSDate date]];
+    
+    return destDateString;
+};
 /**
  *  取出年
  */

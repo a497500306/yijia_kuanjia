@@ -16,6 +16,7 @@
 #import "Singleton.h"
 #import "MBProgressHUD+MJ.h"
 #import "HZActionSheet.h"
+#import "NSDate+MJ.h"
 
 //#import "MLGongju.h"
 
@@ -67,7 +68,13 @@
 /********************数据库***************************/
 #import "CoreModel.h"
 #import "MLMrlbModels.h"//每日量表模型
+#import "MLMrlbIsCompleteModel.h"//每日量表今日填写数据库
 /****************************************************/
 #import "TXSoundPlayer.h"
 
+/********************MOBSDK***************************/
+#import <ShareSDK/ShareSDK.h>
+#import <Comment/Comment.h>//评论和赞
+ #import <SMS_SDK/SMSSDK.h>//免费短信
+/****************************************************/
 

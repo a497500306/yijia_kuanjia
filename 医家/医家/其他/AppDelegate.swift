@@ -42,6 +42,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if (!ret) {
             
         }
+        //MOBSDK
+        //启动应用
+        ShareSDK.registerApp("ef49d7d88590")
+        //启动短信
+        SMSSDK.registerApp("eb9a469cc5fd", withSecret: "9f58d435401b8cdeb1f9abb29da382c0")
         //极光推送
         if #available(iOS 8.0, *) {
             //可以添加自定义categories
@@ -51,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //categories 必须为nil
             JPUSHService.registerForRemoteNotificationTypes(UIRemoteNotificationType.Badge.rawValue | UIRemoteNotificationType.Badge.rawValue | UIRemoteNotificationType.Alert.rawValue, categories: nil)
         }
-        JPUSHService.setupWithOption(launchOptions, appKey: "8c1417c01d24517bf65c1ceb", channel: "Publish channel", apsForProduction: true)
+        JPUSHService.setupWithOption(launchOptions, appKey: "86535e95726d0de2ea1d204d", channel: "Publish channel", apsForProduction: true)
         //环信注册
         //这里需要推送证书
 //        EaseMob.sharedInstance().registerSDKWithAppKey("13055031#yijia", apnsCertName: nil)
@@ -96,6 +101,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 verify.verifyFingerprint()
             }
         }
+        //显示登陆
+//        let storayobard = UIStoryboard(name: "logOn", bundle: nil)
+//        self.window?.rootViewController = storayobard.instantiateInitialViewController()
      return true
     }
 

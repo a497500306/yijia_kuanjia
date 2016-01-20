@@ -470,7 +470,7 @@ class MLHomeController: MLViewController , SDCycleScrollViewDelegate ,UITableVie
             }
         }else{
             let modelFrame : MLHomeCellFrame = self.tableDatas[indexPath.row] as! MLHomeCellFrame
-            let webC = SVWebViewController(URL: NSURL(string: modelFrame.cellModel.url))
+            let webC = MLWebViewController(URL: NSURL(string: modelFrame.cellModel.url))
             webC.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(webC, animated: true)
         }

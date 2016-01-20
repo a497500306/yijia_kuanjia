@@ -34,46 +34,60 @@ class MLMrlbController: UIViewController , UITableViewDelegate , UITableViewData
     }
     //MARK: - 取出数据库数据
     func cloneData(){
-        MLMrlbModels.selectWhere(nil, groupBy: nil, orderBy: "hostID", limit: nil) { (selectResults) -> Void in
-            //主线程刷新UI
+        //取出数据库  保存的数据
+        MLMrlbIsCompleteModel.selectWhere(nil, groupBy: nil, orderBy: "hostID", limit: nil) { (select) -> Void in
+            //回主线程
             NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
-                if selectResults == nil {
-                    return
+                MLMrlbModels.selectWhere(nil, groupBy: nil, orderBy: "hostID", limit: nil) { (selectResults) -> Void in
+                    //主线程刷新UI
+                    NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                        if selectResults == nil {
+                            return
+                        }
+                        self.datas = NSMutableArray(array: selectResults)
+                        //设置cellFarme
+                        let cells : NSMutableArray = NSMutableArray()
+                        for var i = 0 ; i < self.datas.count ; i++ {
+                            let model : MLMrlbModels = self.datas[i] as! MLMrlbModels
+                            let cellM : MLMrlbCellModel = MLMrlbCellModel()
+                            cellM.text = model.title
+                            let cellF : MLMrlbCellFrame = MLMrlbCellFrame()
+                            //判断今天是否保存了数据
+                            if select != nil {
+                                if  select.count != 0 {
+                                    let complete : MLMrlbIsCompleteModel = select[0] as! MLMrlbIsCompleteModel
+                                    //判断今天时候填写了量表
+                                    let date : NSDate = NSDate().strZhuangDate(complete.date)
+                                    if date.isToday() == true  {
+                                        cellM.nameID = complete.completes[i] as! NSString
+                                        cellM.textID = complete.textIDs[i] as! NSString
+                                        //取出nemeID对应的name
+                                        for var ii = 0 ; ii < model.optionKey.count ; ii++ {
+                                            let key : String = (model.optionKey[ii] as? String)!
+                                            if  key == cellM.nameID {
+                                              cellM.name = model.option[ii] as! String
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            cellF.cellModel = cellM
+                            cells.addObject(cellF)
+                        }
+                        self.cellFarmes = cells
+                        //刷新UI
+                        self.tableView.reloadData()
+                    })
                 }
-                self.datas = NSMutableArray(array: selectResults)
-                //设置cellFarme
-                let cells : NSMutableArray = NSMutableArray()
-                for var i = 0 ; i < self.datas.count ; i++ {
-                    let model : MLMrlbModels = self.datas[i] as! MLMrlbModels
-                    let cellM : MLMrlbCellModel = MLMrlbCellModel()
-                    cellM.text = model.title
-                    let cellF : MLMrlbCellFrame = MLMrlbCellFrame()
-                    cellF.cellModel = cellM
-                    cells.addObject(cellF)
-                }
-                self.cellFarmes = cells
-                //刷新UI
-                self.tableView.reloadData()
             })
         }
     }
     //MARK: - 网络请求
     func httpData(){
-        //1.执行网络请求,判断今天时候填写了每日量表
-        let dict : NSDictionary = ["patientId":"1"]
-        let dictWeb : NSDictionary = ["params":MLJson.json(dict as [NSObject : AnyObject])]
-        IWHttpTool.postWithURL(MLInterface.每日量表判断, params: dictWeb as [NSObject : AnyObject], success: { (json) -> Void in
-            print("123123\(json)")
-            //没有填写开始加载数据
-            //填写了
-            }) { (error) -> Void in
-                
-        }
         //网络请求
         let params : NSMutableDictionary = ["":""]
         IWHttpTool.postWithURL(MLInterface.每日量表接收, params: params as [NSObject : AnyObject], success: { ( json) -> Void in
             let model = MLWebModel(keyValues: json)
-            print("123\(json)")
             //转ID
             MLMrlbModels.setupReplacedKeyFromPropertyName({ () -> [NSObject : AnyObject]! in
                 return ["hostID":"id"]
@@ -102,14 +116,26 @@ class MLMrlbController: UIViewController , UITableViewDelegate , UITableViewData
             self.tableView.reloadData()
             self.picker.reloadAllComponents()
             //删除数据库
-            MLMrlbModels.truncateTable(nil)
-            //添加数据到数据库
-            MLMrlbModels.saveModels(datas as [AnyObject], resBlock: nil)
+            MLMrlbModels.truncateTable({ (resBlock) -> Void in
+                //添加数据到数据库
+                MLMrlbModels.saveModels(datas as [AnyObject], resBlock: nil)
+            })
+            
+            
             }) { ( erre ) -> Void in
         }
     }
     //MARK: - 初始化
     func chushihua(){
+        //添加右上角历史量表
+        let textSize : CGSize = MLGongju().计算文字宽高("历史量表", sizeMake: CGSizeMake(10000, 10000), font: Theme.中字体)
+        let righBtn = UIButton(frame: CGRectMake(0, 0, textSize.width, textSize.height))
+        righBtn.setTitle("历史量表", forState: UIControlState.Normal)
+        righBtn.titleLabel?.font = Theme.中字体
+        righBtn.addTarget(self, action: "dianjinishiliangbiao", forControlEvents: UIControlEvents.TouchUpInside)
+        let rightBarItem = UIBarButtonItem(customView: righBtn)
+        self.navigationItem.rightBarButtonItem = rightBarItem
+        
         let tableView : UITableView = UITableView()
         self.tableView = tableView
         tableView.frame = CGRectMake(0, 0, Theme.pingmuF.width, Theme.pingmuF.height - 64 )
@@ -183,11 +209,17 @@ class MLMrlbController: UIViewController , UITableViewDelegate , UITableViewData
         }
         //用户token
         let dict : NSMutableDictionary = ["patientId":"1"]
+        let array : NSMutableArray = NSMutableArray()
+        let textArray : NSMutableArray = NSMutableArray()
         for var i = 0 ; i < self.cellFarmes.count ; i++ {
             let modelFrame :MLMrlbCellFrame = self.cellFarmes[i] as! MLMrlbCellFrame
             dict[modelFrame.cellModel.textID] = modelFrame.cellModel.nameID
+            //nameID保存到数组
+            array.addObject(modelFrame.cellModel.nameID)
+            //textID保存到数组
+            textArray.addObject(modelFrame.cellModel.textID)
         }
-        let params : NSDictionary = ["params":dict]
+        let params : NSDictionary = ["params":MLJson.json(dict as [NSObject : AnyObject])]
         MBProgressHUD.showMessage("正在提交", toView: self.view)
         IWHttpTool.postWithURL(MLInterface.每日量表提交, params: params as [NSObject : AnyObject], success: { (json) -> Void in
                  print("\(json)")
@@ -195,6 +227,17 @@ class MLMrlbController: UIViewController , UITableViewDelegate , UITableViewData
             if webReturn.state == "9000" {
                 MBProgressHUD.hideHUDForView(self.view)
                 MBProgressHUD.showSuccess(webReturn.msg as String, toView: self.view)
+                //提交成功,保存到数据库,进来的时候判断数据库今天是否填写了量表,如果填写了量表则直接显示
+                let isComplete : MLMrlbIsCompleteModel = MLMrlbIsCompleteModel()
+                isComplete.completes = array as [AnyObject]
+                isComplete.textIDs = textArray as [AnyObject]
+                isComplete.date = NSDate().dateZhuangStr()
+                isComplete.hostID = 1
+                //删除所有数据
+                MLMrlbIsCompleteModel.truncateTable({ (isTable ) -> Void in
+                    //添加数据到数据库
+                    MLMrlbIsCompleteModel.insert(isComplete, resBlock: nil)
+                })
             }else{
                 MBProgressHUD.hideHUDForView(self.view)
                 MBProgressHUD.showError(webReturn.msg as String, toView: self.view)
@@ -213,23 +256,31 @@ class MLMrlbController: UIViewController , UITableViewDelegate , UITableViewData
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //取消选择
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
-        //默认选中
-        self.picker.selectRow(0, inComponent: 0, animated: true)
+        //导入模型并更新tableView
+        let modelFrame :MLMrlbCellFrame = self.cellFarmes[indexPath.row] as! MLMrlbCellFrame
+        let modelData : MLMrlbModels = self.datas[indexPath.row] as! MLMrlbModels
         //点击每日量表弹出选择栏
         self.row = indexPath.row
         self.picker.reloadAllComponents()
         let model :MLMrlbModels = self.datas[indexPath.row] as! MLMrlbModels
         self.textView.text = model.title
+        //默认选中
+        let nameID : NSString = modelFrame.cellModel.nameID
+        var ii : Int = 0;
+        for var i = 0 ; i<modelData.optionKey.count ; i++ {
+            if nameID == modelData.optionKey[i] as! NSObject{
+                ii = i
+            }
+        }
+        self.picker.selectRow(ii, inComponent: 0, animated: true)
         //选择哪一行,通过这一行在数组中获得选中的字
-        let row1 : NSInteger = self.picker.selectedRowInComponent(0)
+//        let row1 : NSInteger = self.picker.selectedRowInComponent(ii)
         //取出数组中选择的字
-        let sele : String = model.option[row1] as! String
-        //导入模型并更新tableView
-        let modelFrame :MLMrlbCellFrame = self.cellFarmes[indexPath.row] as! MLMrlbCellFrame
+        let sele : String = model.option[ii] as! String
         let modelNew : MLMrlbCellModel = MLMrlbCellModel()
         modelNew.text = modelFrame.cellModel.text
         modelNew.name = sele
-        modelNew.nameID = model.optionKey[row1] as! String
+        modelNew.nameID = model.optionKey[ii] as! String
         modelNew.textID = String(stringInterpolationSegment: model.hostID)
         modelFrame.cellModel = modelNew
         self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
@@ -305,10 +356,20 @@ class MLMrlbController: UIViewController , UITableViewDelegate , UITableViewData
         modelFrame.cellModel = modelNew
         self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
     }
+    func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 44
+    }
     //MARK: - 点击选择栏完成
     func 点击完成(){
         UIView.animateWithDuration(0.4, animations: { () -> Void in
             self.pickerView.frame = CGRectMake(0, self.view.frame.height, Theme.pingmuF.width, 194 )
         })
+    }
+    //MARK: - 点击历史量表
+    func dianjinishiliangbiao(){
+        let mrilb = MLLslbController()
+        mrilb.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(mrilb, animated: true)
+        mrilb.hidesBottomBarWhenPushed = false
     }
 }

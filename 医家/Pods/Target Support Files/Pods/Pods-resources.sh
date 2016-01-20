@@ -70,6 +70,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "EaseMobDIYUI/EaseMobUI/EaseMobUI/Common/Rdparty/GPUImage/framework/Resources/lookup_soft_elegance_2.png"
   install_resource "EaseMobSDKFull/EaseMobSDKFull/resources/EaseMob.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "SMSSDK/SMS_SDK/en.lproj"
+  install_resource "SMSSDK/SMS_SDK/zh-Hans.lproj"
   install_resource "SVWebViewController/SVWebViewController/SVWebViewController.bundle/SVWebViewControllerBack.png"
   install_resource "SVWebViewController/SVWebViewController/SVWebViewController.bundle/SVWebViewControllerBack@2x.png"
   install_resource "SVWebViewController/SVWebViewController/SVWebViewController.bundle/SVWebViewControllerNext.png"
@@ -81,6 +83,10 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "SVWebViewController/SVWebViewController/UIActivities/Safari/SVWebViewControllerActivitySafari-iPad@2x.png"
   install_resource "SVWebViewController/SVWebViewController/UIActivities/Safari/SVWebViewControllerActivitySafari@2x.png"
   install_resource "SVWebViewController/SVWebViewController/SVWebViewController.bundle"
+  install_resource "ShareSDK2/Comment/Comment.bundle"
+  install_resource "ShareSDK2/ShareSDK/Core/Resource.bundle"
+  install_resource "ShareSDK2/ShareSDK/Core/zh-Hans.lproj"
+  install_resource "ShareSDK2/ShareSDK/Core/en.lproj"
   install_resource "${BUILT_PRODUCTS_DIR}/MWPhotoBrowser.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -96,6 +102,8 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "EaseMobDIYUI/EaseMobUI/EaseMobUI/Common/Rdparty/GPUImage/framework/Resources/lookup_soft_elegance_2.png"
   install_resource "EaseMobSDKFull/EaseMobSDKFull/resources/EaseMob.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "SMSSDK/SMS_SDK/en.lproj"
+  install_resource "SMSSDK/SMS_SDK/zh-Hans.lproj"
   install_resource "SVWebViewController/SVWebViewController/SVWebViewController.bundle/SVWebViewControllerBack.png"
   install_resource "SVWebViewController/SVWebViewController/SVWebViewController.bundle/SVWebViewControllerBack@2x.png"
   install_resource "SVWebViewController/SVWebViewController/SVWebViewController.bundle/SVWebViewControllerNext.png"
@@ -107,6 +115,10 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "SVWebViewController/SVWebViewController/UIActivities/Safari/SVWebViewControllerActivitySafari-iPad@2x.png"
   install_resource "SVWebViewController/SVWebViewController/UIActivities/Safari/SVWebViewControllerActivitySafari@2x.png"
   install_resource "SVWebViewController/SVWebViewController/SVWebViewController.bundle"
+  install_resource "ShareSDK2/Comment/Comment.bundle"
+  install_resource "ShareSDK2/ShareSDK/Core/Resource.bundle"
+  install_resource "ShareSDK2/ShareSDK/Core/zh-Hans.lproj"
+  install_resource "ShareSDK2/ShareSDK/Core/en.lproj"
   install_resource "${BUILT_PRODUCTS_DIR}/MWPhotoBrowser.bundle"
 fi
 

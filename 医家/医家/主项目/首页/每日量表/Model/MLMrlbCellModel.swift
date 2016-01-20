@@ -14,7 +14,7 @@ class MLMrlbCellModel: NSObject {
     /// 内容
     var text : NSString!
     //选项ID
-    var nameID : NSString!
+    var nameID : NSString! = NSString()
     //内容ID
     var textID : NSString!
 }
