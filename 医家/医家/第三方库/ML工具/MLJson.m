@@ -19,4 +19,7 @@
     //Swift中chatManager是readonly，会让他的属性IsAutoLoginEnabled也变成readonly
     [[EaseMob sharedInstance].chatManager setIsAutoLoginEnabled:YES];
 }
++(float)fuckSwiftStringToCGFloct:(NSString *)str{
+    return str.floatValue;
+}
 @end

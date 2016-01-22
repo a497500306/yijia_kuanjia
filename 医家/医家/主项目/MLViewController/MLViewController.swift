@@ -13,9 +13,13 @@ class MLViewController: UIViewController , UIGestureRecognizerDelegate {
     var sideslipView = MLSideslipView()
     override func viewDidLoad() {
         super.viewDidLoad()
+        chushihua1()
+    }
+    func chushihua1(){
         //覆盖全屏的View,用来做侧滑栏
         let p:MLSideslipView = MLSideslipView()
         self.sideslipView = p
+        print("123\(UIApplication.sharedApplication().windows.count)")
         Theme.win.addSubview(p)
         //添加View作为手势响应,放在Controller最下面,所以不影响其他手势执行
         let s:UIView = UIView(frame: self.view.bounds)

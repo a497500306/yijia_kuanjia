@@ -77,6 +77,15 @@ class MLSzController: UIViewController , UITableViewDataSource , UITableViewDele
             }
         }else {//退出登陆
             NSLog("点击退出登陆")
+            //清空手势密码
+            PCCircleViewConst.saveGesture(nil, key: gestureFinalSaveKey)
+            MLUserInfo.sharedMLUserInfo().loadUserInfoFromSanbox()
+            MLUserInfo.sharedMLUserInfo().user = nil
+            MLUserInfo.sharedMLUserInfo().token = nil
+            MLUserInfo.sharedMLUserInfo().zwjs = nil
+            MLUserInfo.sharedMLUserInfo().saveUserInfoToSanbox()
+            let storayobard = UIStoryboard(name: "logIn", bundle: nil)
+            self.view.window?.rootViewController = storayobard.instantiateInitialViewController()
         }
     }
     

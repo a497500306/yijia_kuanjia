@@ -87,6 +87,11 @@ class MLMrlbController: UIViewController , UITableViewDelegate , UITableViewData
         //网络请求
         let params : NSMutableDictionary = ["":""]
         IWHttpTool.postWithURL(MLInterface.每日量表接收, params: params as [NSObject : AnyObject], success: { ( json) -> Void in
+            print("\(json)")
+            //因为历史量表界面调用了这个方法,所以这里要把修改的返回回来
+            MLWebModel.setupReplacedKeyFromPropertyName({ () -> [NSObject : AnyObject]! in
+                return ["data":"data"]
+            })
             let model = MLWebModel(keyValues: json)
             //转ID
             MLMrlbModels.setupReplacedKeyFromPropertyName({ () -> [NSObject : AnyObject]! in
@@ -127,6 +132,7 @@ class MLMrlbController: UIViewController , UITableViewDelegate , UITableViewData
     }
     //MARK: - 初始化
     func chushihua(){
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "返回", style: UIBarButtonItemStyle.Done, target: nil, action: nil)
         //添加右上角历史量表
         let textSize : CGSize = MLGongju().计算文字宽高("历史量表", sizeMake: CGSizeMake(10000, 10000), font: Theme.中字体)
         let righBtn = UIButton(frame: CGRectMake(0, 0, textSize.width, textSize.height))

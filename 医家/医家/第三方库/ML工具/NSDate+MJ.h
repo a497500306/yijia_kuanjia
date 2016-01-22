@@ -61,7 +61,23 @@
  */
 -(NSString *)dateZhuangStr;
 /**
+ *  date转str年月
+ */
+-(NSString *)dateZhuangStrNianYue;
+/**
  *  取出年
  */
 -(NSInteger )quchunian;
+/**
+ *  xxxx-xx-xx转date
+ */
++(NSDate *)strZhuanDateCN:(NSString *)str;
+/**
+ *  xxxx-xx-xx转str
+ */
++(NSString *)DateZhuanStrCN:(NSDate *)date;
+/**
+ *  xxxx-xx-xx转xx日
+ */
++(NSString *)dateStrZhuanDateStrR:(NSString *)str;
 @end

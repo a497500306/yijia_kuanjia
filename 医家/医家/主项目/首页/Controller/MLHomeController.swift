@@ -10,6 +10,7 @@
 import UIKit
 
 class MLHomeController: MLViewController , SDCycleScrollViewDelegate ,UITableViewDelegate , UITableViewDataSource {
+    var yema : Int!
     /// 侧滑栏图片数组
     var images : NSArray! = NSArray()
     /// 侧滑栏文字数组
@@ -32,32 +33,30 @@ class MLHomeController: MLViewController , SDCycleScrollViewDelegate ,UITableVie
             Theme.appD.isHomeXgzt = false
             self.tableView.removeFromSuperview()
             self.chTableView.removeFromSuperview()
-            //dome初始化
-            dome()
             //1.初始化控件
             chushihua()
             //2.取出数据库数据
             cloneData()
             //3.网络请求
-            httpData()
+            //开始下拉刷新
+            self.tableView.header.beginRefreshing()
             //创建侧滑栏
             创建侧滑栏()
         }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        //dome初始化
-        dome()
+        Theme.win.addSubview(super.sideslipView)
         //1.初始化控件
         chushihua()
         //2.取出数据库数据
         cloneData()
-        //3.网络请求
-        httpData()
+        //开始下拉刷新
+        self.tableView.header.beginRefreshing()
         //创建侧滑栏
         创建侧滑栏()
     }
-    //MARK: - 网络请求
+    //MARK: - 轮播图网络请求
     func httpData(){
         //轮播图网络请求
         let params : NSMutableDictionary = ["":""]
@@ -65,11 +64,14 @@ class MLHomeController: MLViewController , SDCycleScrollViewDelegate ,UITableVie
             print("\(json)")
             //删除数据库数据
             MLLBModel.truncateTable(nil)
+            MLWebModel.setupReplacedKeyFromPropertyName({ () -> [NSObject : AnyObject]! in
+                return ["data":"data"]
+            })
             let model = MLWebModel(keyValues: json)
             //转ID
-            MLLBModel.setupReplacedKeyFromPropertyName({ () -> [NSObject : AnyObject]! in
-                return ["hostID":"id"]
-            })
+//            MLLBModel.setupReplacedKeyFromPropertyName({ () -> [NSObject : AnyObject]! in
+//                return ["hostID":"id"]
+//            })
             let arrays : NSMutableArray = MLLBModel.objectArrayWithKeyValuesArray(model.data)
             self.LBMode = arrays
             //更新轮播数据
@@ -82,11 +84,69 @@ class MLHomeController: MLViewController , SDCycleScrollViewDelegate ,UITableVie
             }
             self.lunbo.imageURLStringsGroup = imgs as [AnyObject]
             self.lunbo.titlesGroup = texts as [AnyObject]
+            //轮播图加载完成,加载新闻
+            self.NewHttpData()
             //添加数据到数据库
             MLLBModel.saveModels(arrays as [AnyObject], resBlock: nil)
             }) { ( erre ) -> Void in
         }
     }
+    //MARK: - 新闻网络请求
+    func NewHttpData(){
+        //网络请求
+        //下拉刷新的话页码永远是1
+        self.yema = 1
+        let strYM : String = String(self.yema)
+        let dict : NSMutableDictionary = ["page":strYM]
+        let params : NSDictionary = ["params":MLJson.json(dict as [NSObject : AnyObject])]
+        IWHttpTool.postWithURL(MLInterface.新闻, params: params as [NSObject : AnyObject], success: { ( json) -> Void in
+            //新闻加载完成,关闭下拉刷新
+            //关闭下拉刷新
+            self.tableView.header.endRefreshing()
+            print("\(json)")
+            MLWebModel.setupReplacedKeyFromPropertyName({ () -> [NSObject : AnyObject]! in
+                return ["data":"data"]
+            })
+            let model = MLWebModel(keyValues: json)
+            if model.state != "9000" {
+                MBProgressHUD.showError("不明的问题,开发人员要减薪了!", toView: self.view)
+                return
+            }
+            //转ID
+            MLNewDataModel.setupReplacedKeyFromPropertyName({ () -> [NSObject : AnyObject]! in
+                return ["id":"hostID"]
+            })
+            let datas : NSMutableArray = MLNewDataModel.objectArrayWithKeyValuesArray(model.data)
+            //删除数据库全部数据
+            MLNewDataModel.truncateTable({ (resBlock) -> Void in
+                //添加数据到数据库
+                MLNewDataModel.saveModels(datas as [AnyObject], resBlock: nil)
+            })
+            //把数据转为cell模型
+            //清空数组
+            let arrays : NSMutableArray = NSMutableArray()
+            for var i = 0 ; i < datas.count ; i++ {
+                let cellModelF : MLHomeCellFrame = MLHomeCellFrame()
+                let cellModel : MLHomeCellModel = MLHomeCellModel()
+                let dataModel : MLNewDataModel = datas[i] as! MLNewDataModel
+                cellModel.cellNameStr = dataModel.title
+                cellModel.cellNeirongStr = dataModel.content
+                cellModel.cellDateStr = dataModel.createDate
+                cellModel.cellPinglunsStr = dataModel.commentNumber + "评"
+                cellModel.cellBSImageStr = dataModel.type
+                cellModel.cellImageViewStr = dataModel.imgUrl
+                cellModel.url = dataModel.hrefUrl
+                cellModelF.cellModel = cellModel
+                arrays.addObject(cellModelF)
+            }
+            self.tableDatas = arrays
+            self.tableView.reloadData()
+            }) { ( erre ) -> Void in
+                //关闭下拉刷新
+                self.tableView.header.endRefreshing()
+        }
+    }
+
     //MARK: - 取数据库
     func cloneData(){
         MLLBModel.selectWhere(nil, groupBy: nil, orderBy: "hostID", limit: nil) { (selectResults) -> Void in
@@ -106,6 +166,32 @@ class MLHomeController: MLViewController , SDCycleScrollViewDelegate ,UITableVie
                 }
                 self.lunbo.imageURLStringsGroup = imgs as [AnyObject]
                 self.lunbo.titlesGroup = texts as [AnyObject]
+            })
+        }
+        //取出新闻数据库内的数据
+        MLNewDataModel.selectWhere(nil, groupBy: nil, orderBy: "hostID", limit: nil) { (selectResults) -> Void in
+            //主线程刷新UI
+            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                if selectResults == nil {
+                    return
+                }
+                let arrays : NSMutableArray = NSMutableArray()
+                for var i = selectResults.count - 1 ; i >= 0 ; i-- {
+                    let cellModelF : MLHomeCellFrame = MLHomeCellFrame()
+                    let cellModel : MLHomeCellModel = MLHomeCellModel()
+                    let dataModel : MLNewDataModel = selectResults[i] as! MLNewDataModel
+                    cellModel.cellNameStr = dataModel.title
+                    cellModel.cellNeirongStr = dataModel.content
+                    cellModel.cellDateStr = dataModel.createDate
+                    cellModel.cellPinglunsStr = dataModel.commentNumber + "评"
+                    cellModel.cellBSImageStr = dataModel.type
+                    cellModel.cellImageViewStr = dataModel.imgUrl
+                    cellModel.url = dataModel.hrefUrl
+                    cellModelF.cellModel = cellModel
+                    arrays.addObject(cellModelF)
+                }
+                self.tableDatas = arrays
+                self.tableView.reloadData()
             })
         }
     }
@@ -234,6 +320,10 @@ class MLHomeController: MLViewController , SDCycleScrollViewDelegate ,UITableVie
         tableView.delaysContentTouches = false
         //设置分割线包含整个宽度
         tableView.separatorInset = UIEdgeInsetsZero
+        //下拉刷新
+        self.tableView.header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: "loadNewData")
+        //上拉加载更多
+        self.tableView.footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: "loadMoreData")
         if #available(iOS 8.0, *) {
             tableView.layoutMargins = UIEdgeInsetsZero
         } else {
@@ -470,9 +560,10 @@ class MLHomeController: MLViewController , SDCycleScrollViewDelegate ,UITableVie
             }
         }else{
             let modelFrame : MLHomeCellFrame = self.tableDatas[indexPath.row] as! MLHomeCellFrame
-            let webC = MLWebViewController(URL: NSURL(string: modelFrame.cellModel.url))
-            webC.hidesBottomBarWhenPushed = true
-            self.navigationController?.pushViewController(webC, animated: true)
+            CCWebViewSController.showWithContro(self, withUrlStr: modelFrame.cellModel.url, withTitle: "医家新闻", isTool:true)
+//            let webC = MLWebViewController(URL: NSURL(string: modelFrame.cellModel.url))
+//            webC.hidesBottomBarWhenPushed = true
+//            self.navigationController?.pushViewController(webC, animated: true)
         }
     }
     
@@ -518,6 +609,73 @@ class MLHomeController: MLViewController , SDCycleScrollViewDelegate ,UITableVie
             cell.layoutMargins = UIEdgeInsetsZero
         } else {
             // Fallback on earlier versions
+        }
+    }
+    
+    //MARK: - 下拉刷新
+    func loadNewData(){
+        //重置没有更多数据
+        self.tableView.footer.resetNoMoreData()
+        //3.网络请求
+        httpData()
+    }
+    //MARK: - 下拉加载更多
+    func loadMoreData(){
+        //下拉刷新的话页码永远是1
+        self.yema = self.yema + 1
+        let strYM : String = String(self.yema)
+        let dict : NSMutableDictionary = ["page":strYM]
+        let params : NSDictionary = ["params":MLJson.json(dict as [NSObject : AnyObject])]
+        IWHttpTool.postWithURL(MLInterface.新闻, params: params as [NSObject : AnyObject], success: { ( json) -> Void in
+            //新闻加载完成,关闭下拉刷新
+            //关闭上拉加载更多
+            self.tableView.footer.endRefreshing()
+            print("\(json)")
+            MLWebModel.setupReplacedKeyFromPropertyName({ () -> [NSObject : AnyObject]! in
+                return ["data":"data"]
+            })
+            let model = MLWebModel(keyValues: json)
+            if model.state != "9000" {
+                MBProgressHUD.showError("不明的问题,开发人员要减薪了!", toView: self.view)
+                return
+            }
+            //转ID
+            MLNewDataModel.setupReplacedKeyFromPropertyName({ () -> [NSObject : AnyObject]! in
+                return ["id":"hostID"]
+            })
+            if model.data == nil {
+                self.tableView.footer.noticeNoMoreData()
+                return
+            }
+            if model.data.count == 0 {
+                self.tableView.footer.noticeNoMoreData()
+                return
+            }
+            let datas : NSMutableArray = MLNewDataModel.objectArrayWithKeyValuesArray(model.data)
+            //删除数据库全部数据
+            MLNewDataModel.truncateTable({ (resBlock) -> Void in
+                //添加数据到数据库
+                MLNewDataModel.saveModels(datas as [AnyObject], resBlock: nil)
+            })
+            //把数据转为cell模型
+            for var i = 0 ; i < datas.count ; i++ {
+                let cellModelF : MLHomeCellFrame = MLHomeCellFrame()
+                let cellModel : MLHomeCellModel = MLHomeCellModel()
+                let dataModel : MLNewDataModel = datas[i] as! MLNewDataModel
+                cellModel.cellNameStr = dataModel.title
+                cellModel.cellNeirongStr = dataModel.content
+                cellModel.cellDateStr = dataModel.createDate
+                cellModel.cellPinglunsStr = dataModel.commentNumber + "评"
+                cellModel.cellBSImageStr = dataModel.type
+                cellModel.cellImageViewStr = dataModel.imgUrl
+                cellModel.url = dataModel.hrefUrl
+                cellModelF.cellModel = cellModel
+                self.tableDatas.addObject(cellModelF)
+            }
+            self.tableView.reloadData()
+            }) { ( erre ) -> Void in
+                //关闭上拉加载更多
+                self.tableView.footer.endRefreshing()
         }
     }
 }

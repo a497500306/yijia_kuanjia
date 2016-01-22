@@ -14,4 +14,14 @@ class MLInterface: NSObject {
     static var 每日量表提交 : String = "http://192.168.1.100:8080/yj/app/dailydosage/saveDailyDosageContent?"
     static var 每日量表判断 : String = "http://192.168.1.100:8080/yj/app/dailydosage/getThisDailyDosageContent?"
     static var 历史量表 : String = "http://192.168.1.100:8080/yj/app/dailydosage/queryDailyDosageContent?"
+    static var TXLB : String = "http://192.168.1.100:8080/yj/app/dailydosage/queryCountDailyDosageContent?"
+    static var 历史量表某日 : String = "http://192.168.1.100:8080/yj/app/dailydosage/getByDailyDosageContent?"
+    static var 新闻 : String = "http://192.168.1.100:8080/yj/app/patientnews/query?"
+ /// 注册
+    static var zc : String = "http://192.168.1.100:8080/yj/app/patient/patientIdCard?"
+ /// 修改密码
+    static var xgmm : String = "http://192.168.1.100:8080/yj/app/patient/userUpdatePassword"
+    static var sfxz : String = "http://192.168.1.100:8080/yj/app/patient/registerType"
+    static var dl : String = "http://192.168.1.100:8080/yj/app/patient/login"
+    
 }

@@ -7,6 +7,7 @@
 //
 
 #import "MLMrlbModels.h"
+#import "MJExtension.h"
 
 @implementation MLMrlbModels
 +(NSDictionary *)statementForNSArrayProperties{

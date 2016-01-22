@@ -17,4 +17,5 @@
  *  草拟吗的swift
  */
 + (void)fuckSetIsAutoLoginEnabled;
++ (float)fuckSwiftStringToCGFloct:(NSString *)str;
 @end

@@ -96,7 +96,7 @@
 - (NSDate *)dateWithYMD
 {
     NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
-    fmt.dateFormat = @"yyyy-MM-dd";
+    fmt.dateFormat = @"yyyy年MM月dd日";
     NSString *selfStr = [fmt stringFromDate:self];
     return [fmt dateFromString:selfStr];
 }
@@ -190,6 +190,18 @@
     
     return destDateString;
 };
+-(NSString *)dateZhuangStrNianYue{
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    
+    //zzz表示时区，zzz可以删除，这样返回的日期字符将不包含时区信息。
+    
+    [dateFormatter setDateFormat:@"yyyy-MM"];
+    
+    NSString *destDateString = [dateFormatter stringFromDate:self];
+    
+    return destDateString;
+}
 /**
  *  取出年
  */
@@ -222,5 +234,50 @@
         }
     }
     return NO;
+}
++(NSDate *)strZhuanDateCN:(NSString *)str{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat: @"yyyy-MM-dd"];
+    NSDate *date =[dateFormatter dateFromString:str];
+    
+    NSTimeZone *zone = [NSTimeZone systemTimeZone];
+    
+    NSInteger interval = [zone secondsFromGMTForDate: date];
+    
+    NSDate *localeDate = [date  dateByAddingTimeInterval: interval];
+    return localeDate;
+}
++(NSString *)DateZhuanStrCN:(NSDate *)date{
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    
+    //zzz表示时区，zzz可以删除，这样返回的日期字符将不包含时区信息。
+    
+    [dateFormatter setDateFormat:@"yyyy年MM月dd日"];
+    
+    NSString *destDateString = [dateFormatter stringFromDate:date];
+    
+    return destDateString;
+}
++(NSString *)dateStrZhuanDateStrR:(NSString *)str{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat: @"yyyy-MM-dd"];
+    NSDate *date =[dateFormatter dateFromString:str];
+    
+    NSTimeZone *zone = [NSTimeZone systemTimeZone];
+    
+    NSInteger interval = [zone secondsFromGMTForDate: date];
+    
+    NSDate *localeDate = [date  dateByAddingTimeInterval: interval];
+    
+    NSDateFormatter *dateFormatter1 = [[NSDateFormatter alloc] init];
+    
+    //zzz表示时区，zzz可以删除，这样返回的日期字符将不包含时区信息。
+    
+    [dateFormatter1 setDateFormat:@"dd日"];
+    
+    NSString *destDateString = [dateFormatter1 stringFromDate:localeDate];
+    
+    return destDateString;
 }
 @end

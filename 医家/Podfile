@@ -31,4 +31,5 @@ pod 'ShareSDK2', '~> 2.12.4'#ShareSDK主模块
 pod 'MOBFoundation', '~> 1.3.1'#MOB公共库
 pod 'ShareSDK2/Comment'# 评论和赞模块(可选)
 pod 'SMSSDK', '~> 2.0.0'#免费短信
+pod 'PNChart', '~> 0.8.8'#图表
 

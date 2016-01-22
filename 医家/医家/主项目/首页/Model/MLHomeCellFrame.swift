@@ -55,13 +55,13 @@ class MLHomeCellFrame: NSObject {
             
             //5.时间frame
             //5.1计算时间宽高
-            let dateSize = MLGongju().计算文字宽高(self.cellModel.cellNameStr, sizeMake: CGSizeMake(10000, 10000), font: Theme.中字体)
+            let dateSize = MLGongju().计算文字宽高(self.cellModel.cellDateStr, sizeMake: CGSizeMake(10000, 10000), font: Theme.中字体)
             self.cellDateFamer = CGRectMake(self.cellNameFrame.origin.x, self.cellNeirongFrame.origin.y + self.cellNeirongFrame.height + 间距, dateSize.width, dateSize.height)
             
             //6.标识frame
-            let 标识宽 = CGFloat (32)
-            let 标识高 = CGFloat (dateSize.height)
-            self.cellBSImageFrame = CGRectMake(UIScreen.mainScreen().bounds.width - 间距 - 标识宽, self.cellDateFamer.origin.y, 标识宽, 标识高)
+            let 标识宽 = CGFloat (30)
+            let 标识高 = CGFloat (15)
+            self.cellBSImageFrame = CGRectMake(UIScreen.mainScreen().bounds.width - 间距 - 标识宽, self.cellDateFamer.origin.y+((dateSize.height - 15)/2), 标识宽, 标识高)
             
             //7.评论数frame
             //7.1计算评论数宽高

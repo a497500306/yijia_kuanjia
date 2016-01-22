@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var isNewsXgzt: Bool! = false
     var isTestXgzt: Bool! = false
     var isXgzt: Bool! = false
+    //是否清除数据,用户注册到选择身份界面退出时
+    var isUp:NSString! = "是"
     //地理位子
     var locManager : CLLocationManager!
     var mgr : CLLocationManager!
@@ -81,29 +83,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //友盟统计
         MobClick.startWithAppkey("568dbbd5e0f55a94a000084b", reportPolicy: BATCH, channelId: nil)
-        //判断是否有密码
-        //计算字符串长度
-        let str  = PCCircleViewConst.getGestureWithKey(gestureFinalSaveKey)
-        if str == nil {//没有密码
-            
-        }else{//跳转
-            let gestureVc :GestureViewController  = GestureViewController()
-            gestureVc.isNAV = true
-            gestureVc.type = GestureViewControllerTypeLogin
-            gestureVc.hidesBottomBarWhenPushed = true
-            let homeVc : MLNavigationContrller = self.window!.rootViewController! as! MLNavigationContrller
-            homeVc.pushViewController(gestureVc, animated: false)
-            //登陆时判断是否打开指纹解锁
-            MLUserInfo.sharedMLUserInfo().loadUserInfoFromSanbox()
-            if (MLUserInfo.sharedMLUserInfo().zwjs != nil) {//打开了指纹解锁
-                let verify : FingerPrintVerify = FingerPrintVerify()
-                verify.isNAV = true
-                verify.verifyFingerprint()
+        //显示登陆
+        MLUserInfo.sharedMLUserInfo().loadUserInfoFromSanbox()
+        if MLUserInfo.sharedMLUserInfo().token == nil{
+            let storayobard = UIStoryboard(name: "logIn", bundle: nil)
+            self.window?.rootViewController = storayobard.instantiateInitialViewController()
+        }else{
+            //判断是否有密码
+            //计算字符串长度
+            let str  = PCCircleViewConst.getGestureWithKey(gestureFinalSaveKey)
+            if str == nil {//没有密码
+                
+            }else{//跳转
+                let gestureVc :GestureViewController  = GestureViewController()
+                gestureVc.isNAV = true
+                gestureVc.type = GestureViewControllerTypeLogin
+                gestureVc.hidesBottomBarWhenPushed = true
+                let homeVc : MLNavigationContrller = self.window!.rootViewController! as! MLNavigationContrller
+                homeVc.pushViewController(gestureVc, animated: false)
+                //登陆时判断是否打开指纹解锁
+                MLUserInfo.sharedMLUserInfo().loadUserInfoFromSanbox()
+                if (MLUserInfo.sharedMLUserInfo().zwjs != nil) {//打开了指纹解锁
+                    let verify : FingerPrintVerify = FingerPrintVerify()
+                    verify.isNAV = true
+                    verify.verifyFingerprint()
+                }
             }
         }
-        //显示登陆
-//        let storayobard = UIStoryboard(name: "logOn", bundle: nil)
-//        self.window?.rootViewController = storayobard.instantiateInitialViewController()
      return true
     }
 
@@ -235,8 +241,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationProtectedDataDidBecomeAvailable(application: UIApplication) {
 //        EaseMobUIClient.sharedInstance().applicationProtectedDataDidBecomeAvailable(application)
     }
-    func applicationDidReceiveMemoryWarning(application: UIApplication) {
+    func applicationDidReceiveMemoryWarning(application: UIApplication) {//APP退出
 //        EaseMobUIClient.sharedInstance().applicationDidReceiveMemoryWarning(application)
+        if self.isUp == "否" {//注册到选择身份退出时
+            MLUserInfo.sharedMLUserInfo().loadUserInfoFromSanbox()
+            MLUserInfo.sharedMLUserInfo().user = nil
+            MLUserInfo.sharedMLUserInfo().token = nil
+            MLUserInfo.sharedMLUserInfo().zwjs = nil
+            MLUserInfo.sharedMLUserInfo().saveUserInfoToSanbox()
+        }
     }
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
 //        EaseMobUIClient.sharedInstance().application(application, didRegisterForRemoteNotificationsWithDeviceToken: deviceToken)

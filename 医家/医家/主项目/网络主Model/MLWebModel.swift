@@ -10,7 +10,7 @@ import UIKit
 
 class MLWebModel: NSObject {
     /// 数据数组
-    var data : AnyObject!
+    var data : NSArray!
     /// state
     var state : NSString!
 }

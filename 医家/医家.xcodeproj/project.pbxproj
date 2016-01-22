@@ -44,9 +44,9 @@
 		3941FC3F1C2BFE3F003ECCFC /* MLDTCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3941FC3E1C2BFE3F003ECCFC /* MLDTCellModel.swift */; };
 		394607B71C4F1CE400A1F601 /* MLMrlbIsCompleteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 394607B61C4F1CE400A1F601 /* MLMrlbIsCompleteModel.m */; };
 		394607BD1C4F4DD900A1F601 /* MLLslbController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394607BC1C4F4DD900A1F601 /* MLLslbController.swift */; };
-		394607C01C4F693C00A1F601 /* MLWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394607BF1C4F693C00A1F601 /* MLWebViewController.swift */; };
-		394607C21C4F736900A1F601 /* logOn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 394607C11C4F736900A1F601 /* logOn.storyboard */; };
-		394607CD1C4F740400A1F601 /* MLlogOnController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394607CC1C4F740400A1F601 /* MLlogOnController.swift */; };
+		394607D11C4F95CF00A1F601 /* MLDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 394607D01C4F95CF00A1F601 /* MLDatePicker.m */; };
+		394607DA1C4FA8C800A1F601 /* MLTxlbController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394607D91C4FA8C800A1F601 /* MLTxlbController.swift */; };
+		394607DD1C4FAA6A00A1F601 /* MLLslbModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 394607DC1C4FAA6A00A1F601 /* MLLslbModel.m */; };
 		396304B41C34FEE900494868 /* MLCyxjController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396304B31C34FEE900494868 /* MLCyxjController.swift */; };
 		396304B61C34FEFF00494868 /* MLMrlbController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396304B51C34FEFF00494868 /* MLMrlbController.swift */; };
 		396304B81C34FF1200494868 /* MLTzzxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396304B71C34FF1200494868 /* MLTzzxController.swift */; };
@@ -99,6 +99,12 @@
 		39E709A01C1FDBB8005462C3 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E709971C1FDBB8005462C3 /* SDCollectionViewCell.m */; };
 		39E709A11C1FDBB8005462C3 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E709991C1FDBB8005462C3 /* SDCycleScrollView.m */; };
 		39E709A21C1FDBB8005462C3 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E7099B1C1FDBB8005462C3 /* UIView+SDExtension.m */; };
+		39E869741C507C5C003FB738 /* MLTbckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E869731C507C5C003FB738 /* MLTbckController.m */; };
+		39E869771C5091D2003FB738 /* MLTbckModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 39E869761C5091D2003FB738 /* MLTbckModel.m */; };
+		39E8697F1C50E408003FB738 /* MLLsmrController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E8697E1C50E408003FB738 /* MLLsmrController.swift */; };
+		39E869811C50E677003FB738 /* MLWebLsmrModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E869801C50E677003FB738 /* MLWebLsmrModel.swift */; };
+		39E869831C50E873003FB738 /* MLLsmrNameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E869821C50E873003FB738 /* MLLsmrNameModel.swift */; };
+		39E869851C50EA30003FB738 /* MLLsmrXXModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E869841C50EA30003FB738 /* MLLsmrXXModel.swift */; };
 		39EDAB771C48D76C009F4AFF /* MLMrlbModels.m in Sources */ = {isa = PBXBuildFile; fileRef = 39EDAB761C48D76C009F4AFF /* MLMrlbModels.m */; };
 		39EDAB791C48EE50009F4AFF /* MLMrlbCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EDAB781C48EE50009F4AFF /* MLMrlbCell.swift */; };
 		39EDAB7B1C48EE88009F4AFF /* MLMrlbCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EDAB7A1C48EE88009F4AFF /* MLMrlbCellModel.swift */; };
@@ -120,6 +126,23 @@
 		39F490EF1C4E34EE00BCA10A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F490EE1C4E34EE00BCA10A /* UIKit.framework */; };
 		39F4AD2B1C27AE580044DC40 /* MLTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F4AD2A1C27AE580044DC40 /* MLTabBarController.swift */; };
 		39F4AD2E1C27B9DD0044DC40 /* MLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F4AD2D1C27B9DD0044DC40 /* MLButton.swift */; };
+		39F4C0B31C51BD890031FD97 /* cc_webview_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 39F4C0B01C51BD890031FD97 /* cc_webview_back.png */; };
+		39F4C0B41C51BD890031FD97 /* cc_webview_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 39F4C0B11C51BD890031FD97 /* cc_webview_menu.png */; };
+		39F4C0B51C51BD890031FD97 /* CCWebViewSController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F4C0B21C51BD890031FD97 /* CCWebViewSController.swift */; };
+		39F4C0B71C51BDD90031FD97 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F4C0B61C51BDD90031FD97 /* WebKit.framework */; };
+		39F4C0B91C51CCF30031FD97 /* logIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39F4C0B81C51CCF30031FD97 /* logIn.storyboard */; };
+		39F4C0D31C51CD530031FD97 /* MLForgetPasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F4C0BE1C51CD530031FD97 /* MLForgetPasswordController.m */; };
+		39F4C0D41C51CD530031FD97 /* MLRegisteredController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F4C0C41C51CD530031FD97 /* MLRegisteredController.m */; };
+		39F4C0D51C51CD530031FD97 /* MLVerificationCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F4C0C61C51CD530031FD97 /* MLVerificationCodeController.m */; };
+		39F4C0D61C51CD530031FD97 /* MLReistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F4C0C91C51CD530031FD97 /* MLReistModel.m */; };
+		39F4C0D71C51CD530031FD97 /* MLLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F4C0CE1C51CD530031FD97 /* MLLoginController.m */; };
+		39F4C0D81C51CD530031FD97 /* MLLoinModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F4C0D11C51CD530031FD97 /* MLLoinModel.m */; };
+		39F4C0DC1C51D11E0031FD97 /* MLVerificationCodeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F4C0DB1C51D11E0031FD97 /* MLVerificationCodeInfo.m */; };
+		39F4C0DF1C51F46D0031FD97 /* MLNewDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F4C0DE1C51F46D0031FD97 /* MLNewDataModel.m */; };
+		39F4C0E21C5224590031FD97 /* MLIDVerificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F4C0E11C5224590031FD97 /* MLIDVerificationController.m */; };
+		39F4C0E51C522D550031FD97 /* MLIDSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F4C0E41C522D550031FD97 /* MLIDSelectionController.m */; };
+		39F4C0E81C5235080031FD97 /* MLBindPatientController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F4C0E71C5235080031FD97 /* MLBindPatientController.m */; };
+		39F4C0EC1C5254980031FD97 /* MLUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F4C0EB1C5254980031FD97 /* MLUserModel.m */; };
 		39F593D31C44C37100D148B8 /* FingerPrintVerify.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F593CE1C44C37100D148B8 /* FingerPrintVerify.m */; };
 		39F593D41C44C37100D148B8 /* InputPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F593D01C44C37100D148B8 /* InputPasswordView.m */; };
 		39F593D51C44C37100D148B8 /* TouchInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F593D21C44C37100D148B8 /* TouchInstance.m */; };
@@ -259,9 +282,11 @@
 		394607B51C4F1CE400A1F601 /* MLMrlbIsCompleteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMrlbIsCompleteModel.h; sourceTree = "<group>"; };
 		394607B61C4F1CE400A1F601 /* MLMrlbIsCompleteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMrlbIsCompleteModel.m; sourceTree = "<group>"; };
 		394607BC1C4F4DD900A1F601 /* MLLslbController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLLslbController.swift; sourceTree = "<group>"; };
-		394607BF1C4F693C00A1F601 /* MLWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLWebViewController.swift; sourceTree = "<group>"; };
-		394607C11C4F736900A1F601 /* logOn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = logOn.storyboard; sourceTree = "<group>"; };
-		394607CC1C4F740400A1F601 /* MLlogOnController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLlogOnController.swift; sourceTree = "<group>"; };
+		394607CF1C4F95CF00A1F601 /* MLDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLDatePicker.h; sourceTree = "<group>"; };
+		394607D01C4F95CF00A1F601 /* MLDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLDatePicker.m; sourceTree = "<group>"; };
+		394607D91C4FA8C800A1F601 /* MLTxlbController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLTxlbController.swift; sourceTree = "<group>"; };
+		394607DB1C4FAA6A00A1F601 /* MLLslbModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLslbModel.h; sourceTree = "<group>"; };
+		394607DC1C4FAA6A00A1F601 /* MLLslbModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLslbModel.m; sourceTree = "<group>"; };
 		396304B31C34FEE900494868 /* MLCyxjController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLCyxjController.swift; sourceTree = "<group>"; };
 		396304B51C34FEFF00494868 /* MLMrlbController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLMrlbController.swift; sourceTree = "<group>"; };
 		396304B71C34FF1200494868 /* MLTzzxController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLTzzxController.swift; sourceTree = "<group>"; };
@@ -311,6 +336,14 @@
 		39E709991C1FDBB8005462C3 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
 		39E7099A1C1FDBB8005462C3 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
 		39E7099B1C1FDBB8005462C3 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		39E869721C507C5C003FB738 /* MLTbckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLTbckController.h; sourceTree = "<group>"; };
+		39E869731C507C5C003FB738 /* MLTbckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLTbckController.m; sourceTree = "<group>"; };
+		39E869751C5091D2003FB738 /* MLTbckModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLTbckModel.h; sourceTree = "<group>"; };
+		39E869761C5091D2003FB738 /* MLTbckModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLTbckModel.m; sourceTree = "<group>"; };
+		39E8697E1C50E408003FB738 /* MLLsmrController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLLsmrController.swift; sourceTree = "<group>"; };
+		39E869801C50E677003FB738 /* MLWebLsmrModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLWebLsmrModel.swift; sourceTree = "<group>"; };
+		39E869821C50E873003FB738 /* MLLsmrNameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLLsmrNameModel.swift; sourceTree = "<group>"; };
+		39E869841C50EA30003FB738 /* MLLsmrXXModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLLsmrXXModel.swift; sourceTree = "<group>"; };
 		39EDAB751C48D76C009F4AFF /* MLMrlbModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMrlbModels.h; sourceTree = "<group>"; };
 		39EDAB761C48D76C009F4AFF /* MLMrlbModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMrlbModels.m; sourceTree = "<group>"; };
 		39EDAB781C48EE50009F4AFF /* MLMrlbCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLMrlbCell.swift; sourceTree = "<group>"; };
@@ -336,6 +369,35 @@
 		39F490EE1C4E34EE00BCA10A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		39F4AD2A1C27AE580044DC40 /* MLTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLTabBarController.swift; sourceTree = "<group>"; };
 		39F4AD2D1C27B9DD0044DC40 /* MLButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLButton.swift; sourceTree = "<group>"; };
+		39F4C0B01C51BD890031FD97 /* cc_webview_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cc_webview_back.png; sourceTree = "<group>"; };
+		39F4C0B11C51BD890031FD97 /* cc_webview_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cc_webview_menu.png; sourceTree = "<group>"; };
+		39F4C0B21C51BD890031FD97 /* CCWebViewSController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCWebViewSController.swift; sourceTree = "<group>"; };
+		39F4C0B61C51BDD90031FD97 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		39F4C0B81C51CCF30031FD97 /* logIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = logIn.storyboard; sourceTree = "<group>"; };
+		39F4C0BD1C51CD530031FD97 /* MLForgetPasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLForgetPasswordController.h; sourceTree = "<group>"; };
+		39F4C0BE1C51CD530031FD97 /* MLForgetPasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLForgetPasswordController.m; sourceTree = "<group>"; };
+		39F4C0C31C51CD530031FD97 /* MLRegisteredController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLRegisteredController.h; sourceTree = "<group>"; };
+		39F4C0C41C51CD530031FD97 /* MLRegisteredController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLRegisteredController.m; sourceTree = "<group>"; };
+		39F4C0C51C51CD530031FD97 /* MLVerificationCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLVerificationCodeController.h; sourceTree = "<group>"; };
+		39F4C0C61C51CD530031FD97 /* MLVerificationCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLVerificationCodeController.m; sourceTree = "<group>"; };
+		39F4C0C81C51CD530031FD97 /* MLReistModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLReistModel.h; sourceTree = "<group>"; };
+		39F4C0C91C51CD530031FD97 /* MLReistModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLReistModel.m; sourceTree = "<group>"; };
+		39F4C0CD1C51CD530031FD97 /* MLLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLoginController.h; sourceTree = "<group>"; };
+		39F4C0CE1C51CD530031FD97 /* MLLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLoginController.m; sourceTree = "<group>"; };
+		39F4C0D01C51CD530031FD97 /* MLLoinModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLLoinModel.h; sourceTree = "<group>"; };
+		39F4C0D11C51CD530031FD97 /* MLLoinModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLLoinModel.m; sourceTree = "<group>"; };
+		39F4C0DA1C51D11E0031FD97 /* MLVerificationCodeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLVerificationCodeInfo.h; sourceTree = "<group>"; };
+		39F4C0DB1C51D11E0031FD97 /* MLVerificationCodeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLVerificationCodeInfo.m; sourceTree = "<group>"; };
+		39F4C0DD1C51F46D0031FD97 /* MLNewDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLNewDataModel.h; sourceTree = "<group>"; };
+		39F4C0DE1C51F46D0031FD97 /* MLNewDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLNewDataModel.m; sourceTree = "<group>"; };
+		39F4C0E01C5224590031FD97 /* MLIDVerificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLIDVerificationController.h; sourceTree = "<group>"; };
+		39F4C0E11C5224590031FD97 /* MLIDVerificationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLIDVerificationController.m; sourceTree = "<group>"; };
+		39F4C0E31C522D550031FD97 /* MLIDSelectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLIDSelectionController.h; sourceTree = "<group>"; };
+		39F4C0E41C522D550031FD97 /* MLIDSelectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLIDSelectionController.m; sourceTree = "<group>"; };
+		39F4C0E61C5235080031FD97 /* MLBindPatientController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLBindPatientController.h; sourceTree = "<group>"; };
+		39F4C0E71C5235080031FD97 /* MLBindPatientController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLBindPatientController.m; sourceTree = "<group>"; };
+		39F4C0EA1C5254980031FD97 /* MLUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLUserModel.h; sourceTree = "<group>"; };
+		39F4C0EB1C5254980031FD97 /* MLUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLUserModel.m; sourceTree = "<group>"; };
 		39F593CD1C44C37100D148B8 /* FingerPrintVerify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FingerPrintVerify.h; sourceTree = "<group>"; };
 		39F593CE1C44C37100D148B8 /* FingerPrintVerify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FingerPrintVerify.m; sourceTree = "<group>"; };
 		39F593CF1C44C37100D148B8 /* InputPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputPasswordView.h; sourceTree = "<group>"; };
@@ -386,6 +448,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39F4C0B71C51BDD90031FD97 /* WebKit.framework in Frameworks */,
 				39F490EF1C4E34EE00BCA10A /* UIKit.framework in Frameworks */,
 				39A1971D1C33923A009214E2 /* SystemConfiguration.framework in Frameworks */,
 				39F490ED1C4E34AE00BCA10A /* CoreFoundation.framework in Frameworks */,
@@ -446,6 +509,8 @@
 		390575EF1C477FE000208D54 /* 新闻 */ = {
 			isa = PBXGroup;
 			children = (
+				39F4C0DD1C51F46D0031FD97 /* MLNewDataModel.h */,
+				39F4C0DE1C51F46D0031FD97 /* MLNewDataModel.m */,
 			);
 			path = "新闻";
 			sourceTree = "<group>";
@@ -455,6 +520,7 @@
 			children = (
 				390575F41C47848300208D54 /* MLWebModel.swift */,
 				39F490E11C4E0CE300BCA10A /* MLWebReturnModel.swift */,
+				39E869801C50E677003FB738 /* MLWebLsmrModel.swift */,
 			);
 			path = "网络主Model";
 			sourceTree = "<group>";
@@ -756,6 +822,8 @@
 		394607BA1C4F4DB900A1F601 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				394607DB1C4FAA6A00A1F601 /* MLLslbModel.h */,
+				394607DC1C4FAA6A00A1F601 /* MLLslbModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -767,80 +835,45 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		394607BE1C4F692400A1F601 /* MLWebViewController */ = {
+		394607CE1C4F95A100A1F601 /* 年月选择器 */ = {
 			isa = PBXGroup;
 			children = (
-				394607BF1C4F693C00A1F601 /* MLWebViewController.swift */,
+				394607CF1C4F95CF00A1F601 /* MLDatePicker.h */,
+				394607D01C4F95CF00A1F601 /* MLDatePicker.m */,
 			);
-			path = MLWebViewController;
+			path = "年月选择器";
 			sourceTree = "<group>";
 		};
-		394607C31C4F73E300A1F601 /* 登陆 */ = {
+		394607D21C4FA80100A1F601 /* 图形显示 */ = {
 			isa = PBXGroup;
 			children = (
-				394607C41C4F73E300A1F601 /* 注册 */,
-				394607C81C4F73E300A1F601 /* 登陆 */,
+				394607D31C4FA80100A1F601 /* Controller */,
+				394607D41C4FA80100A1F601 /* Model */,
+				394607D51C4FA80100A1F601 /* View */,
 			);
-			path = "登陆";
+			path = "图形显示";
 			sourceTree = "<group>";
 		};
-		394607C41C4F73E300A1F601 /* 注册 */ = {
+		394607D31C4FA80100A1F601 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				394607C51C4F73E300A1F601 /* Controller */,
-				394607C61C4F73E300A1F601 /* Model */,
-				394607C71C4F73E300A1F601 /* View */,
-			);
-			path = "注册";
-			sourceTree = "<group>";
-		};
-		394607C51C4F73E300A1F601 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				394607CC1C4F740400A1F601 /* MLlogOnController.swift */,
+				394607D91C4FA8C800A1F601 /* MLTxlbController.swift */,
+				39E869721C507C5C003FB738 /* MLTbckController.h */,
+				39E869731C507C5C003FB738 /* MLTbckController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		394607C61C4F73E300A1F601 /* Model */ = {
+		394607D41C4FA80100A1F601 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				39E869751C5091D2003FB738 /* MLTbckModel.h */,
+				39E869761C5091D2003FB738 /* MLTbckModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		394607C71C4F73E300A1F601 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		394607C81C4F73E300A1F601 /* 登陆 */ = {
-			isa = PBXGroup;
-			children = (
-				394607C91C4F73E300A1F601 /* Controller */,
-				394607CA1C4F73E300A1F601 /* Model */,
-				394607CB1C4F73E300A1F601 /* View */,
-			);
-			path = "登陆";
-			sourceTree = "<group>";
-		};
-		394607C91C4F73E300A1F601 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		394607CA1C4F73E300A1F601 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		394607CB1C4F73E300A1F601 /* View */ = {
+		394607D51C4FA80100A1F601 /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -882,6 +915,8 @@
 		3963049B1C34FECA00494868 /* 每日量表 */ = {
 			isa = PBXGroup;
 			children = (
+				39E869781C50E3B8003FB738 /* 某日量表 */,
+				394607D21C4FA80100A1F601 /* 图形显示 */,
 				394607B81C4F4DB900A1F601 /* 历史量表 */,
 				3963049C1C34FECA00494868 /* Controller */,
 				3963049D1C34FECA00494868 /* Model */,
@@ -1332,6 +1367,40 @@
 			path = PageControl;
 			sourceTree = "<group>";
 		};
+		39E869781C50E3B8003FB738 /* 某日量表 */ = {
+			isa = PBXGroup;
+			children = (
+				39E869791C50E3B8003FB738 /* Controller */,
+				39E8697A1C50E3B8003FB738 /* Model */,
+				39E8697B1C50E3B8003FB738 /* View */,
+			);
+			path = "某日量表";
+			sourceTree = "<group>";
+		};
+		39E869791C50E3B8003FB738 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				39E8697E1C50E408003FB738 /* MLLsmrController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		39E8697A1C50E3B8003FB738 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				39E869821C50E873003FB738 /* MLLsmrNameModel.swift */,
+				39E869841C50EA30003FB738 /* MLLsmrXXModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		39E8697B1C50E3B8003FB738 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		39EDAB7E1C490578009F4AFF /* 语音播报 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1373,6 +1442,164 @@
 			);
 			name = MLButton;
 			path = "首页/View/MLButton";
+			sourceTree = "<group>";
+		};
+		39F4C0AE1C51BD890031FD97 /* 内置浏览器 */ = {
+			isa = PBXGroup;
+			children = (
+				39F4C0AF1C51BD890031FD97 /* CCWebViewController_Swift */,
+			);
+			path = "内置浏览器";
+			sourceTree = "<group>";
+		};
+		39F4C0AF1C51BD890031FD97 /* CCWebViewController_Swift */ = {
+			isa = PBXGroup;
+			children = (
+				39F4C0B01C51BD890031FD97 /* cc_webview_back.png */,
+				39F4C0B11C51BD890031FD97 /* cc_webview_menu.png */,
+				39F4C0B21C51BD890031FD97 /* CCWebViewSController.swift */,
+			);
+			path = CCWebViewController_Swift;
+			sourceTree = "<group>";
+		};
+		39F4C0BA1C51CD530031FD97 /* 登陆模块 */ = {
+			isa = PBXGroup;
+			children = (
+				39F4C0E91C5254550031FD97 /* model */,
+				39F4C0BB1C51CD530031FD97 /* 忘记密码 */,
+				39F4C0C11C51CD530031FD97 /* 注册 */,
+				39F4C0CB1C51CD530031FD97 /* 登陆 */,
+			);
+			path = "登陆模块";
+			sourceTree = "<group>";
+		};
+		39F4C0BB1C51CD530031FD97 /* 忘记密码 */ = {
+			isa = PBXGroup;
+			children = (
+				39F4C0BC1C51CD530031FD97 /* Controller */,
+				39F4C0BF1C51CD530031FD97 /* Model */,
+				39F4C0C01C51CD530031FD97 /* View */,
+			);
+			path = "忘记密码";
+			sourceTree = "<group>";
+		};
+		39F4C0BC1C51CD530031FD97 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				39F4C0BD1C51CD530031FD97 /* MLForgetPasswordController.h */,
+				39F4C0BE1C51CD530031FD97 /* MLForgetPasswordController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		39F4C0BF1C51CD530031FD97 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		39F4C0C01C51CD530031FD97 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		39F4C0C11C51CD530031FD97 /* 注册 */ = {
+			isa = PBXGroup;
+			children = (
+				39F4C0C21C51CD530031FD97 /* Controller */,
+				39F4C0C71C51CD530031FD97 /* Model */,
+				39F4C0CA1C51CD530031FD97 /* View */,
+			);
+			path = "注册";
+			sourceTree = "<group>";
+		};
+		39F4C0C21C51CD530031FD97 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				39F4C0C31C51CD530031FD97 /* MLRegisteredController.h */,
+				39F4C0C41C51CD530031FD97 /* MLRegisteredController.m */,
+				39F4C0C51C51CD530031FD97 /* MLVerificationCodeController.h */,
+				39F4C0C61C51CD530031FD97 /* MLVerificationCodeController.m */,
+				39F4C0E01C5224590031FD97 /* MLIDVerificationController.h */,
+				39F4C0E11C5224590031FD97 /* MLIDVerificationController.m */,
+				39F4C0E31C522D550031FD97 /* MLIDSelectionController.h */,
+				39F4C0E41C522D550031FD97 /* MLIDSelectionController.m */,
+				39F4C0E61C5235080031FD97 /* MLBindPatientController.h */,
+				39F4C0E71C5235080031FD97 /* MLBindPatientController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		39F4C0C71C51CD530031FD97 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				39F4C0C81C51CD530031FD97 /* MLReistModel.h */,
+				39F4C0C91C51CD530031FD97 /* MLReistModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		39F4C0CA1C51CD530031FD97 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		39F4C0CB1C51CD530031FD97 /* 登陆 */ = {
+			isa = PBXGroup;
+			children = (
+				39F4C0CC1C51CD530031FD97 /* Controller */,
+				39F4C0CF1C51CD530031FD97 /* Model */,
+				39F4C0D21C51CD530031FD97 /* View */,
+			);
+			path = "登陆";
+			sourceTree = "<group>";
+		};
+		39F4C0CC1C51CD530031FD97 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				39F4C0CD1C51CD530031FD97 /* MLLoginController.h */,
+				39F4C0CE1C51CD530031FD97 /* MLLoginController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		39F4C0CF1C51CD530031FD97 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				39F4C0D01C51CD530031FD97 /* MLLoinModel.h */,
+				39F4C0D11C51CD530031FD97 /* MLLoinModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		39F4C0D21C51CD530031FD97 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		39F4C0D91C51D11E0031FD97 /* 用户验证码记录 */ = {
+			isa = PBXGroup;
+			children = (
+				39F4C0DA1C51D11E0031FD97 /* MLVerificationCodeInfo.h */,
+				39F4C0DB1C51D11E0031FD97 /* MLVerificationCodeInfo.m */,
+			);
+			path = "用户验证码记录";
+			sourceTree = "<group>";
+		};
+		39F4C0E91C5254550031FD97 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				39F4C0EA1C5254980031FD97 /* MLUserModel.h */,
+				39F4C0EB1C5254980031FD97 /* MLUserModel.m */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		39F593CB1C44C37100D148B8 /* 指纹解锁 */ = {
@@ -1432,9 +1659,8 @@
 				39FC03ED1C19625900E9EB28 /* 第三方库 */,
 				39FC03D51C19622A00E9EB28 /* 其他 */,
 				39FC03D71C19622A00E9EB28 /* 主项目 */,
-				394607C31C4F73E300A1F601 /* 登陆 */,
 				39FC03AB1C19618200E9EB28 /* Main.storyboard */,
-				394607C11C4F736900A1F601 /* logOn.storyboard */,
+				39F4C0B81C51CCF30031FD97 /* logIn.storyboard */,
 				39FC03AE1C19618200E9EB28 /* Assets.xcassets */,
 				39FC03B01C19618200E9EB28 /* LaunchScreen.storyboard */,
 				39FC03B31C19618200E9EB28 /* Info.plist */,
@@ -1471,7 +1697,7 @@
 		39FC03D71C19622A00E9EB28 /* 主项目 */ = {
 			isa = PBXGroup;
 			children = (
-				394607BE1C4F692400A1F601 /* MLWebViewController */,
+				39F4C0BA1C51CD530031FD97 /* 登陆模块 */,
 				390575F31C47847500208D54 /* 网络主Model */,
 				39F4AD2C1C27B9C40044DC40 /* MLButton */,
 				39F593DA1C45F01C00D148B8 /* MLTableView */,
@@ -1554,6 +1780,9 @@
 		39FC03ED1C19625900E9EB28 /* 第三方库 */ = {
 			isa = PBXGroup;
 			children = (
+				39F4C0D91C51D11E0031FD97 /* 用户验证码记录 */,
+				39F4C0AE1C51BD890031FD97 /* 内置浏览器 */,
+				394607CE1C4F95A100A1F601 /* 年月选择器 */,
 				39F490E51C4E33EC00BCA10A /* 极光推送 */,
 				39EDAB7E1C490578009F4AFF /* 语音播报 */,
 				390576191C47D91500208D54 /* 数据库第三方 */,
@@ -1739,6 +1968,7 @@
 		5F2211B5F826BD70E2875CD5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				39F4C0B61C51BDD90031FD97 /* WebKit.framework */,
 				39F490EE1C4E34EE00BCA10A /* UIKit.framework */,
 				39F490EC1C4E34AE00BCA10A /* CoreFoundation.framework */,
 				39F490EA1C4E34A700BCA10A /* CFNetwork.framework */,
@@ -1879,11 +2109,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39F4C0B41C51BD890031FD97 /* cc_webview_menu.png in Resources */,
 				39FC03B21C19618200E9EB28 /* LaunchScreen.storyboard in Resources */,
+				39F4C0B91C51CCF30031FD97 /* logIn.storyboard in Resources */,
 				3941FC3D1C2BBC2D003ECCFC /* mapapi.bundle in Resources */,
-				394607C21C4F736900A1F601 /* logOn.storyboard in Resources */,
 				39FC04061C19625900E9EB28 /* MBProgressHUD.bundle in Resources */,
 				39FC03AF1C19618200E9EB28 /* Assets.xcassets in Resources */,
+				39F4C0B31C51BD890031FD97 /* cc_webview_back.png in Resources */,
 				39FC03AD1C19618200E9EB28 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1957,11 +2189,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39F4C0E51C522D550031FD97 /* MLIDSelectionController.m in Sources */,
 				3905767C1C47D91500208D54 /* NSData+Param.m in Sources */,
+				394607DD1C4FAA6A00A1F601 /* MLLslbModel.m in Sources */,
 				390576791C47D91500208D54 /* CoreHttp.m in Sources */,
 				39EDAB8F1C4CC230009F4AFF /* MLJson.m in Sources */,
 				390576731C47D91500208D54 /* NSString+CoreFMDB.m in Sources */,
+				39F4C0DC1C51D11E0031FD97 /* MLVerificationCodeInfo.m in Sources */,
 				39F593E31C4643F800D148B8 /* MLTsszController.swift in Sources */,
+				39F4C0D41C51CD530031FD97 /* MLRegisteredController.m in Sources */,
 				390576801C47D91500208D54 /* CoreModel.m in Sources */,
 				3905767D1C47D91500208D54 /* NSString+File.m in Sources */,
 				39EDAB831C4C7DDE009F4AFF /* MLInterface.swift in Sources */,
@@ -1975,11 +2211,15 @@
 				3905767E1C47D91500208D54 /* NSURL+File.m in Sources */,
 				39E7099D1C1FDBB8005462C3 /* TAAnimatedDotView.m in Sources */,
 				39E43F831C3F627C00C8117C /* MLCoreConstController.swift in Sources */,
+				39F4C0D31C51CD530031FD97 /* MLForgetPasswordController.m in Sources */,
 				39F068791C323F4D0062CC1F /* MLHomeCellModel.swift in Sources */,
 				39F593D31C44C37100D148B8 /* FingerPrintVerify.m in Sources */,
 				390576811C47D91500208D54 /* NSArray+CoreModel.m in Sources */,
+				39F4C0DF1C51F46D0031FD97 /* MLNewDataModel.m in Sources */,
+				39E869851C50EA30003FB738 /* MLLsmrXXModel.swift in Sources */,
 				39F4AD2B1C27AE580044DC40 /* MLTabBarController.swift in Sources */,
 				396304BC1C34FF3200494868 /* MLWyyyController.swift in Sources */,
+				394607DA1C4FA8C800A1F601 /* MLTxlbController.swift in Sources */,
 				39EDAB811C490578009F4AFF /* TXSoundPlayer.m in Sources */,
 				39847F741C3FCF1600AD7B98 /* PCLockLabel.m in Sources */,
 				390576831C47D91500208D54 /* CoreModel+Cache.m in Sources */,
@@ -1991,7 +2231,7 @@
 				390576861C47D91500208D54 /* NSObject+Create.m in Sources */,
 				39A197101C328C63009214E2 /* NSDate+MLDate.m in Sources */,
 				39FC03EB1C19622A00E9EB28 /* MLSideslipView.swift in Sources */,
-				394607CD1C4F740400A1F601 /* MLlogOnController.swift in Sources */,
+				39E869741C507C5C003FB738 /* MLTbckController.m in Sources */,
 				39847F731C3FCF1600AD7B98 /* PCCircleInfoView.m in Sources */,
 				39A1970F1C328C63009214E2 /* NSDate+MJ.m in Sources */,
 				39F068771C323F290062CC1F /* MLHomeTableViewCell.swift in Sources */,
@@ -2000,6 +2240,7 @@
 				396304BA1C34FF2500494868 /* MLWdysController.swift in Sources */,
 				3941FBBD1C295657003ECCFC /* HMAnnotationView.m in Sources */,
 				390576821C47D91500208D54 /* NSDictionary+Sqlite.m in Sources */,
+				39F4C0E81C5235080031FD97 /* MLBindPatientController.m in Sources */,
 				39FC04191C1A7C8400E9EB28 /* MLForumController.swift in Sources */,
 				3905768E1C47D91500208D54 /* CoreModelConst.m in Sources */,
 				39847F6C1C3FCE9900AD7B98 /* GestureVerifyViewController.m in Sources */,
@@ -2012,18 +2253,22 @@
 				39E709A21C1FDBB8005462C3 /* UIView+SDExtension.m in Sources */,
 				39FC041D1C1A7DBE00E9EB28 /* MLTestController.swift in Sources */,
 				39E709891C1FAB3B005462C3 /* MLTableViewController.swift in Sources */,
-				394607C01C4F693C00A1F601 /* MLWebViewController.swift in Sources */,
 				3941FBF51C2BB426003ECCFC /* baiduditu.mm in Sources */,
 				39847F6D1C3FCE9900AD7B98 /* GestureViewController.m in Sources */,
+				39E869811C50E677003FB738 /* MLWebLsmrModel.swift in Sources */,
 				39A197061C326DAF009214E2 /* MLHomeCellFrame.swift in Sources */,
 				39E7099E1C1FDBB8005462C3 /* TADotView.m in Sources */,
 				39FC04091C19625900E9EB28 /* Header.m in Sources */,
 				39E709A01C1FDBB8005462C3 /* SDCollectionViewCell.m in Sources */,
 				39EDAB961C4D2CD5009F4AFF /* MLChatViewController.m in Sources */,
 				39FC040B1C19625900E9EB28 /* IWHttpTool.m in Sources */,
+				39F4C0D61C51CD530031FD97 /* MLReistModel.m in Sources */,
 				3941FC3F1C2BFE3F003ECCFC /* MLDTCellModel.swift in Sources */,
+				39E869831C50E873003FB738 /* MLLsmrNameModel.swift in Sources */,
+				39F4C0EC1C5254980031FD97 /* MLUserModel.m in Sources */,
 				39847F661C3FCB9B00AD7B98 /* CALayer+Anim.m in Sources */,
 				390576881C47D91500208D54 /* NSObject+Insert.m in Sources */,
+				39E8697F1C50E408003FB738 /* MLLsmrController.swift in Sources */,
 				396304B61C34FEFF00494868 /* MLMrlbController.swift in Sources */,
 				3905767F1C47D91500208D54 /* UploadFile.m in Sources */,
 				39EDAB771C48D76C009F4AFF /* MLMrlbModels.m in Sources */,
@@ -2032,10 +2277,12 @@
 				39FC041B1C1A7D7400E9EB28 /* MLNewsController.swift in Sources */,
 				3905767A1C47D91500208D54 /* NSString+CoreHttp.m in Sources */,
 				39FC03EA1C19622A00E9EB28 /* MLNavigationContrller.swift in Sources */,
+				39E869771C5091D2003FB738 /* MLTbckModel.m in Sources */,
 				39EDAB791C48EE50009F4AFF /* MLMrlbCell.swift in Sources */,
 				3941FBF71C2BB5D9003ECCFC /* MLFjyyBaiduDTController.swift in Sources */,
 				39F490E21C4E0CE300BCA10A /* MLWebReturnModel.swift in Sources */,
 				394607BD1C4F4DD900A1F601 /* MLLslbController.swift in Sources */,
+				39F4C0D71C51CD530031FD97 /* MLLoginController.m in Sources */,
 				390576841C47D91500208D54 /* CoreModel+Compare.m in Sources */,
 				390576851C47D91500208D54 /* NSObject+CoreModelCommon.m in Sources */,
 				39A197121C336C98009214E2 /* MLGongju.swift in Sources */,
@@ -2044,22 +2291,27 @@
 				39E43F451C3F592600C8117C /* Theme.swift in Sources */,
 				39847F641C3FCB9B00AD7B98 /* PCCircleView.m in Sources */,
 				396304C01C34FF5100494868 /* MLZyqkController.swift in Sources */,
+				39F4C0D81C51CD530031FD97 /* MLLoinModel.m in Sources */,
 				39E7099C1C1FDBB8005462C3 /* TAAbstractDotView.m in Sources */,
 				3941FBBC1C295657003ECCFC /* HMAnnotation.m in Sources */,
 				39E709A11C1FDBB8005462C3 /* SDCycleScrollView.m in Sources */,
 				3905768B1C47D91500208D54 /* NSObject+Update.m in Sources */,
 				3905768D1C47D91500208D54 /* NSString+Stackoverflow.m in Sources */,
 				39FC04051C19625900E9EB28 /* MBProgressHUD+MJ.m in Sources */,
+				39F4C0D51C51CD530031FD97 /* MLVerificationCodeController.m in Sources */,
 				39F593E11C46373100D148B8 /* MLSzController.swift in Sources */,
+				394607D11C4F95CF00A1F601 /* MLDatePicker.m in Sources */,
 				39FC03E81C19622A00E9EB28 /* AppDelegate.swift in Sources */,
 				39847F651C3FCB9B00AD7B98 /* PCCircleViewConst.m in Sources */,
 				39FC040A1C19625900E9EB28 /* MLUserInfo.m in Sources */,
+				39F4C0E21C5224590031FD97 /* MLIDVerificationController.m in Sources */,
 				3905768C1C47D91500208D54 /* NSOperationQueue+Queue.m in Sources */,
 				39F4AD2E1C27B9DD0044DC40 /* MLButton.swift in Sources */,
 				39EDAB7D1C48EEA6009F4AFF /* MLMrlbCellFrame.swift in Sources */,
 				390575F51C47848300208D54 /* MLWebModel.swift in Sources */,
 				396304B81C34FF1200494868 /* MLTzzxController.swift in Sources */,
 				39FC03EC1C19622A00E9EB28 /* MLHomeController.swift in Sources */,
+				39F4C0B51C51BD890031FD97 /* CCWebViewSController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2204,6 +2456,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2241,6 +2494,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
